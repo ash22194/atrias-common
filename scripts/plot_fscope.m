@@ -20,6 +20,7 @@ function plot_fscope(name, x_data, y_data, legend_data, title_data, x_label, y_l
             hold all;
             if ~isempty(shading)
                 area(x_data{i},shading{i},'LineStyle','none','FaceColor',0.9*[1 1 1]);
+                area(x_data{i},-shading{i},'LineStyle','none','FaceColor',0.9*[1 1 1],'HandleVisibility','off');
             end
             plot(x_data{i}, y_data{i});
             legend(legend_data{i});
