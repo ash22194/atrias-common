@@ -13,6 +13,9 @@
 %   leg = shin/thigh encoders
 %   trans = motor encoders
 
+% Update rates
+update_freq = 1000; %Hz
+sample_time = 1/update_freq; % seconds
 
 % Renishaw Absolute 32-bit encoders
 LEG_A_CALIB_LOC = 0.959931088596881; % Radians
