@@ -1,5 +1,105 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InstrumentPanel" children="Controls">
+    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox7" children="Controls">
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label22" children="Controls">
+        <Property name="Text">Left Front</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">7, 104</Property>
+        <Property name="Name">Label22</Property>
+        <Property name="Size">111, 42</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay5" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s3</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">2</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">100, 38</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">129, 43</Property>
+        <Property name="Name">NumericDisplay5</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label23" children="Controls">
+        <Property name="Text">Left Back</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">7, 43</Property>
+        <Property name="Name">Label23</Property>
+        <Property name="Size">95, 42</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay6" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s2</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">2</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">100, 38</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">370, 104</Property>
+        <Property name="Name">NumericDisplay6</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label24" children="Controls">
+        <Property name="Text">Right Front</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">245, 104</Property>
+        <Property name="Name">Label24</Property>
+        <Property name="Size">119, 42</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay7" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s1</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">2</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">100, 38</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">370, 43</Property>
+        <Property name="Name">NumericDisplay7</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label25" children="Controls">
+        <Property name="Text">Right Back</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">251, 43</Property>
+        <Property name="Name">Label25</Property>
+        <Property name="Size">113, 42</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay8" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s4</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">2</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">100, 38</Property>
+        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Location">129, 104</Property>
+        <Property name="Name">NumericDisplay8</Property>
+      </Object>
+      <Property name="Text">Logic Voltages</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Font">Segoe UI, 16pt</Property>
+      <Property name="Location">533, 447</Property>
+      <Property name="Name">GroupBox7</Property>
+      <Property name="Size">491, 160</Property>
+    </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox6" children="Controls">
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
         <Property name="Text">Amplifier</Property>
@@ -1078,5 +1178,5 @@
       <Property name="Size">575, 250</Property>
     </Object>
     <Property name="BackColor">Control</Property>
-    <Property name="ClientSize">1920, 1200</Property>
+    <Property name="ClientSize">1920, 1080</Property>
   </Object>

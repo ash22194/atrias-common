@@ -17,6 +17,10 @@
 update_freq = 1000; %Hz
 sample_time = 1/update_freq; % seconds
 
+% Low-level Medulla parameters
+MEDULLA_ADC_OFFSET_COUNTS = 172;  % Ticks
+MEDULLA_ADC_MAX_VOLTS     = 2.70; % Volts
+
 % Renishaw Absolute 32-bit encoders
 LEG_A_CALIB_LOC = 0.959931088596881; % Radians
 LEG_B_CALIB_LOC = 2.181661564992912; % Radians
