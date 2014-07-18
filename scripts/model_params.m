@@ -1,12 +1,12 @@
 %%% Parameters for the mechanical model of ATRIAS
 
 %% Environment
-g = 9.81; % m/s
+g = 9.803; % m/s
 
 %% Boom
 m_boom = 4.49; % kg
 l_boom = 1.8161; % m
-m_counter_weight = 30; % kg
+m_counter_weight = 24.05; % kg
 h_boom = 0.99; % m
 % boom mount offsets
 boom_mount_angle = 7.2824 * pi/180; % rad
@@ -37,7 +37,7 @@ N_hip = r_hip_shaft / r_hip_gearhead;
 l_seg = 0.5; % m
 
 %% Full Robot
-m_total_real = 62.6; % kg
+m_total_real = 59.65; % kg (measured with boom attached)
 m_total = m_total_real - m_counter_weight; % kg
 i_robot = 2.2; % kg m^2
 d_y_mount_to_com = 0.2301; % m

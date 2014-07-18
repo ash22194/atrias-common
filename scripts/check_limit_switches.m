@@ -8,6 +8,7 @@ fclose(f,h);
 
 % Unpack data
 limit = readxpcfile(limit_data);
+%limit = supr;
 
 % Go through last value of each signal
 number_of_signals = 4;
