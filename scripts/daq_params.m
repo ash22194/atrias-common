@@ -17,6 +17,13 @@
 update_freq = 1000; %Hz
 sample_time = 1/update_freq; % seconds
 
+% Medulla state parameters
+MEDULLA_STATE_IDLE  = 0;
+MEDULLA_STATE_RUN   = 2;
+MEDULLA_STATE_HALT  = 4;
+MEDULLA_STATE_ERROR = 5;
+MEDULLA_STATE_RESET = 6;
+
 % Low-level Medulla parameters
 MEDULLA_ADC_OFFSET_COUNTS = 172;  % Ticks
 MEDULLA_ADC_MAX_VOLTS     = 2.70; % Volts
