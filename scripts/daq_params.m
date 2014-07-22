@@ -21,6 +21,10 @@ sample_time = 1/update_freq; % seconds
 MEDULLA_ADC_OFFSET_COUNTS = 172;  % Ticks
 MEDULLA_ADC_MAX_VOLTS     = 2.70; % Volts
 
+% The command sent from the GUI to the system to control
+% enabling and disabling
+gui_state_cmd = 0; % This corresponds to the Idle Medulla state
+
 % Renishaw Absolute 32-bit encoders
 LEG_A_CALIB_LOC = 0.959931088596881; % Radians
 LEG_B_CALIB_LOC = 2.181661564992912; % Radians
