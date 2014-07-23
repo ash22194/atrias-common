@@ -24,13 +24,15 @@ MEDULLA_STATE_HALT  = 4;
 MEDULLA_STATE_ERROR = 5;
 MEDULLA_STATE_RESET = 6;
 
+% Commands sent from the Instrument Panel to the system.
+% These become parameters for the Simulink model
+gui_enable_cmd  = 0; % Whether to enable the robot
+gui_disable_cmd = 0; % Whether to disable the robot
+gui_reset_cmd   = 0; % Whether to reset the robot (after a E-Stop)
+
 % Low-level Medulla parameters
 MEDULLA_ADC_OFFSET_COUNTS = 172;  % Ticks
 MEDULLA_ADC_MAX_VOLTS     = 2.70; % Volts
-
-% The command sent from the GUI to the system to control
-% enabling and disabling
-gui_state_cmd = 0; % This corresponds to the Idle Medulla state
 
 % Renishaw Absolute 32-bit encoders
 LEG_A_CALIB_LOC = 0.959931088596881; % Radians
