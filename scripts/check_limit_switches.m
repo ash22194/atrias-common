@@ -1,4 +1,4 @@
-% Attach to the target computer file system.
+%% Attach to the target computer file system.
 f=xpctarget.fs;
 
 % Open the file, read the data, close the file.
@@ -8,7 +8,9 @@ fclose(f,h);
 
 % Unpack data
 limit = readxpcfile(limit_data);
-%limit = supr;
+
+%% Use data in workspace
+limit = supr;
 
 % Go through last value of each signal
 number_of_signals = 4;
