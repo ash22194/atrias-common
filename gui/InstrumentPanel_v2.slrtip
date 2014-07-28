@@ -1,6 +1,345 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InstrumentPanel" children="Controls">
+    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox5" children="Controls">
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay4" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s6</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">191, 356</Property>
+        <Property name="Name">NumericDisplay4</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay3" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s5</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">33, 356</Property>
+        <Property name="Name">NumericDisplay3</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay2" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s1</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">191, 198</Property>
+        <Property name="Name">NumericDisplay2</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay1" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s3</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">33, 198</Property>
+        <Property name="Name">NumericDisplay1</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay9" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s2</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">191, 40</Property>
+        <Property name="Name">NumericDisplay9</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay10" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s4</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">1</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">39, 27</Property>
+        <Property name="Location">33, 40</Property>
+        <Property name="Name">NumericDisplay10</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular6" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s6</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">191, 356</Property>
+        <Property name="Name">GaugeAngular6</Property>
+        <Property name="Text">GaugeAngular6</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular5" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s5</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">33, 356</Property>
+        <Property name="Name">GaugeAngular5</Property>
+        <Property name="Text">GaugeAngular5</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular4" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s1</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">191, 198</Property>
+        <Property name="Name">GaugeAngular4</Property>
+        <Property name="Text">GaugeAngular4</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular3" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s3</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">33, 198</Property>
+        <Property name="Name">GaugeAngular3</Property>
+        <Property name="Text">GaugeAngular3</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular2" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s2</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">191, 40</Property>
+        <Property name="Name">GaugeAngular2</Property>
+        <Property name="Text">GaugeAngular2</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular1" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s4</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Pointers">
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="AngleMin">198</Property>
+          <Property name="AngleSpan">126</Property>
+          <Property name="Min">-10</Property>
+          <Property name="Span">70</Property>
+          <Property name="LimitSpanLowerEnabled">True</Property>
+          <Property name="LimitMaxUpperValue">16</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="GeneratorFixed">
+            <Property name="MajorCount">8</Property>
+            <Property name="MinorCount">4</Property>
+          </Property>
+          <Property name="GeneratorStyle">Fixed</Property>
+        </Property>
+        <Property name="InnerRadius">70</Property>
+        <Property name="Size">152, 152</Property>
+        <Property name="Location">33, 40</Property>
+        <Property name="Name">GaugeAngular1</Property>
+        <Property name="Text">GaugeAngular1</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label27" children="Controls">
+        <Property name="Text">Right</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">250, 21</Property>
+        <Property name="Name">Label27</Property>
+        <Property name="Size">34, 15</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label26" children="Controls">
+        <Property name="Text">Hip</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">1, 413</Property>
+        <Property name="Name">Label26</Property>
+        <Property name="Size">33, 17</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label5" children="Controls">
+        <Property name="Text">Front</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">1, 101</Property>
+        <Property name="Name">Label5</Property>
+        <Property name="Size">33, 13</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label6" children="Controls">
+        <Property name="Text">Back</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">1, 257</Property>
+        <Property name="Name">Label6</Property>
+        <Property name="Size">33, 15</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label3" children="Controls">
+        <Property name="Text">Left</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">77, 22</Property>
+        <Property name="Name">Label3</Property>
+        <Property name="Size">31, 15</Property>
+      </Object>
+      <Property name="Text">Motor Voltages</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
+      <Property name="Location">1282, 131</Property>
+      <Property name="Name">GroupBox5</Property>
+      <Property name="Size">345, 510</Property>
+    </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox8" children="Controls">
+      <Object type="MW.Instruments.LED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LED64" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcType">None</Property>
+        <Property name="BindingSrcPath">
+        </Property>
+        <Property name="TargetName">
+        </Property>
+        <Property name="Size">32, 32</Property>
+        <Property name="Location">6, 24</Property>
+        <Property name="Name">LED64</Property>
+      </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED3" children="Controls">
         <Property name="BindingSrcPath">/gui_reset_cmd</Property>
         <Property name="TargetName">TargetPC1</Property>
@@ -9,7 +348,7 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">147, 24</Property>
+        <Property name="Location">139, 127</Property>
         <Property name="Name">SwitchLED3</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
@@ -20,7 +359,7 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">79, 24</Property>
+        <Property name="Location">71, 127</Property>
         <Property name="Name">SwitchLED2</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
@@ -31,15 +370,15 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">11, 24</Property>
+        <Property name="Location">3, 127</Property>
         <Property name="Name">SwitchLED1</Property>
       </Object>
       <Property name="Text">System Command</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">1155, 588</Property>
+      <Property name="Location">903, 56</Property>
       <Property name="Name">GroupBox8</Property>
-      <Property name="Size">215, 69</Property>
+      <Property name="Size">207, 167</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox7" children="Controls">
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label22" children="Controls">
@@ -137,7 +476,7 @@
       <Property name="Text">Logic Voltages</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 16pt</Property>
-      <Property name="Location">533, 447</Property>
+      <Property name="Location">406, 56</Property>
       <Property name="Name">GroupBox7</Property>
       <Property name="Size">491, 160</Property>
     </Object>
@@ -155,7 +494,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s56</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s56</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 167</Property>
@@ -174,7 +513,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s55</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s55</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 167</Property>
@@ -193,7 +532,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s54</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s54</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 167</Property>
@@ -203,7 +542,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s53</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s53</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 167</Property>
@@ -222,7 +561,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s52</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s52</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 167</Property>
@@ -232,7 +571,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s51</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s51</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 167</Property>
@@ -251,7 +590,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s50</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s50</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 167</Property>
@@ -261,7 +600,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s49</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s49</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 151</Property>
@@ -280,7 +619,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s48</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s48</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 151</Property>
@@ -290,7 +629,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s47</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s47</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 151</Property>
@@ -309,7 +648,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s46</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s46</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 151</Property>
@@ -319,7 +658,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s45</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s45</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 151</Property>
@@ -338,7 +677,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s44</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s44</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 151</Property>
@@ -348,7 +687,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s43</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s43</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 151</Property>
@@ -358,7 +697,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s42</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s42</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 135</Property>
@@ -368,7 +707,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s41</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s41</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 135</Property>
@@ -378,7 +717,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s40</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s40</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 135</Property>
@@ -388,7 +727,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s39</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s39</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 135</Property>
@@ -398,7 +737,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s38</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s38</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 135</Property>
@@ -408,7 +747,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s37</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s37</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 135</Property>
@@ -418,7 +757,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s36</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s36</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 135</Property>
@@ -428,7 +767,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s35</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s35</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 119</Property>
@@ -438,7 +777,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s34</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s34</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 119</Property>
@@ -448,7 +787,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s33</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s33</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 119</Property>
@@ -458,7 +797,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s32</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s32</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 119</Property>
@@ -468,7 +807,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s31</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s31</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 119</Property>
@@ -478,7 +817,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s30</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s30</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 119</Property>
@@ -488,7 +827,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s29</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s29</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 119</Property>
@@ -498,7 +837,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s28</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s28</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 103</Property>
@@ -508,7 +847,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s27</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s27</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 103</Property>
@@ -518,7 +857,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s26</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s26</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 103</Property>
@@ -528,7 +867,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s25</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s25</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 103</Property>
@@ -538,7 +877,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s24</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s24</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 103</Property>
@@ -548,7 +887,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s23</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s23</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 103</Property>
@@ -558,7 +897,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s22</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s22</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 103</Property>
@@ -568,7 +907,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s21</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s21</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 87</Property>
@@ -578,7 +917,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s20</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s20</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 87</Property>
@@ -588,7 +927,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s19</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s19</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 87</Property>
@@ -598,7 +937,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s18</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s18</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 87</Property>
@@ -608,7 +947,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s17</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s17</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 87</Property>
@@ -618,7 +957,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s16</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s16</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 87</Property>
@@ -628,7 +967,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s15</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s15</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 87</Property>
@@ -638,7 +977,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s14</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s14</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 71</Property>
@@ -648,7 +987,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s7</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s7</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">305, 55</Property>
@@ -658,7 +997,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s13</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s13</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 71</Property>
@@ -668,7 +1007,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s6</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s6</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">270, 55</Property>
@@ -678,7 +1017,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s12</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s12</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 71</Property>
@@ -688,7 +1027,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s5</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s5</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">233, 55</Property>
@@ -698,7 +1037,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s11</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s11</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 71</Property>
@@ -708,7 +1047,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s4</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s4</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">197, 55</Property>
@@ -718,7 +1057,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s10</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s10</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 71</Property>
@@ -728,7 +1067,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s3</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s3</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">163, 55</Property>
@@ -738,7 +1077,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s9</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s9</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 71</Property>
@@ -756,7 +1095,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s8</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s8</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 71</Property>
@@ -806,7 +1145,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s2</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s2</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">127, 55</Property>
@@ -824,7 +1163,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcPath">DAQ/medulla_errors/s1</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/medulla_errors/s1</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">16, 16</Property>
         <Property name="Location">91, 55</Property>
@@ -838,111 +1177,11 @@
       <Property name="Name">GroupBox6</Property>
       <Property name="Size">344, 188</Property>
     </Object>
-    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox5" children="Controls">
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label5" children="Controls">
-        <Property name="Text">Left Front</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">7, 104</Property>
-        <Property name="Name">Label5</Property>
-        <Property name="Size">111, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay3" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/motor_voltage_volts/s3</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">129, 43</Property>
-        <Property name="Name">NumericDisplay3</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label6" children="Controls">
-        <Property name="Text">Left Back</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">7, 43</Property>
-        <Property name="Name">Label6</Property>
-        <Property name="Size">95, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay2" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/motor_voltage_volts/s2</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">370, 104</Property>
-        <Property name="Name">NumericDisplay2</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label4" children="Controls">
-        <Property name="Text">Right Front</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">245, 104</Property>
-        <Property name="Name">Label4</Property>
-        <Property name="Size">119, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay1" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/motor_voltage_volts/s1</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">370, 43</Property>
-        <Property name="Name">NumericDisplay1</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label3" children="Controls">
-        <Property name="Text">Right Back</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">251, 43</Property>
-        <Property name="Name">Label3</Property>
-        <Property name="Size">113, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay4" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/motor_voltage_volts/s4</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">129, 104</Property>
-        <Property name="Name">NumericDisplay4</Property>
-      </Object>
-      <Property name="Text">Motor Voltages</Property>
-      <Property name="UseCompatibleTextRendering">True</Property>
-      <Property name="Font">Segoe UI, 16pt</Property>
-      <Property name="Location">12, 447</Property>
-      <Property name="Name">GroupBox5</Property>
-      <Property name="Size">491, 160</Property>
-    </Object>
     <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label1" children="Controls">
       <Property name="Text">Motor Temperatures</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 16pt</Property>
-      <Property name="Location">12, 630</Property>
+      <Property name="Location">12, 240</Property>
       <Property name="Name">Label1</Property>
       <Property name="Size">246, 42</Property>
     </Object>
@@ -1010,7 +1249,7 @@
       <Property name="Text">Left Front</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">12, 931</Property>
+      <Property name="Location">12, 541</Property>
       <Property name="Name">GroupBox3</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1078,7 +1317,7 @@
       <Property name="Text">Left Back</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">12, 675</Property>
+      <Property name="Location">12, 285</Property>
       <Property name="Name">GroupBox4</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1146,7 +1385,7 @@
       <Property name="Text">Right Front</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">593, 931</Property>
+      <Property name="Location">593, 541</Property>
       <Property name="Name">GroupBox2</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1214,7 +1453,7 @@
       <Property name="Text">Right Back</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">593, 675</Property>
+      <Property name="Location">593, 285</Property>
       <Property name="Name">GroupBox1</Property>
       <Property name="Size">575, 250</Property>
     </Object>
