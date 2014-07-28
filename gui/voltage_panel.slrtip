@@ -325,7 +325,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay17" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s7</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s8</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -340,7 +340,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s7</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s8</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Pointers">
           <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
@@ -378,7 +378,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay18" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s6</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s7</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -394,7 +394,7 @@
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s6</Property>
+        <Property name="BindingSrcPath">atrias_system/DAQ/logic_voltage_volts/s7</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Pointers">
           <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>

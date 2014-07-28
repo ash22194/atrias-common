@@ -375,7 +375,7 @@
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">82, 188</Property>
         <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">6, 22</Property>
+        <Property name="Location">6, 24</Property>
         <Property name="Name">GaugeFluidLevel2147483629</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel2147483628" children="Controls">
@@ -412,7 +412,7 @@
         <Property name="TargetName">TargetPC1</Property>
         <Property name="Size">82, 188</Property>
         <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">102, 22</Property>
+        <Property name="Location">102, 24</Property>
         <Property name="Name">GaugeFluidLevel2147483627</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay16" children="Controls">
@@ -429,21 +429,6 @@
         <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
         <Property name="Location">198, 216</Property>
         <Property name="Name">NumericDisplay16</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay13" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_temperatures/s</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">50, 27</Property>
-        <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-        <Property name="Location">102, 24</Property>
-        <Property name="Name">NumericDisplay13</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay17" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
@@ -485,21 +470,6 @@
         <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
         <Property name="Location">6, 216</Property>
         <Property name="Name">NumericDisplay18</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay14" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_temperatures/s</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">50, 27</Property>
-        <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-        <Property name="Location">6, 24</Property>
-        <Property name="Name">NumericDisplay14</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay15" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
