@@ -831,17 +831,93 @@
       <Property name="Size">337, 204</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox8" children="Controls">
-      <Object type="MW.Instruments.LED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LED64" children="Controls">
-        <Property name="OutputValue">0</Property>
+      <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel4" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcType">None</Property>
-        <Property name="BindingSrcPath">
+        <Property name="BindingSrcPath">atrias_system/is_error_cmd/Compare</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Tube">
+          <Property name="FillColor">Red</Property>
         </Property>
-        <Property name="TargetName">
+        <Property name="ScaleRange">
+          <Property name="Span">1</Property>
         </Property>
-        <Property name="Size">32, 32</Property>
-        <Property name="Location">6, 24</Property>
-        <Property name="Name">LED64</Property>
+        <Property name="ScaleDisplay">
+          <Property name="Visible">False</Property>
+        </Property>
+        <Property name="Rotation">X270</Property>
+        <Property name="Size">195, 24</Property>
+        <Property name="Location">6, 116</Property>
+        <Property name="Name">GaugeFluidLevel4</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel3" children="Controls">
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/is_halt_cmd/Compare</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Tube">
+          <Property name="FillColor">Yellow</Property>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="Span">1</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="Visible">False</Property>
+        </Property>
+        <Property name="Rotation">X270</Property>
+        <Property name="Size">195, 24</Property>
+        <Property name="Location">6, 91</Property>
+        <Property name="Name">GaugeFluidLevel3</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel2" children="Controls">
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/Start Controller/Saturation</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Tube">
+          <Property name="FillColor">Blue</Property>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="Span">1</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="Visible">False</Property>
+        </Property>
+        <Property name="Rotation">X270</Property>
+        <Property name="Size">195, 24</Property>
+        <Property name="Location">6, 66</Property>
+        <Property name="Name">GaugeFluidLevel2</Property>
+      </Object>
+      <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel1" children="Controls">
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcPath">atrias_system/is_idle_cmd/Compare</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Tube">
+          <Property name="FillColor">Green</Property>
+        </Property>
+        <Property name="ScaleRange">
+          <Property name="Span">1</Property>
+        </Property>
+        <Property name="ScaleDisplay">
+          <Property name="Visible">False</Property>
+        </Property>
+        <Property name="Rotation">X270</Property>
+        <Property name="Size">195, 24</Property>
+        <Property name="Location">6, 41</Property>
+        <Property name="Name">GaugeFluidLevel1</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label42" children="Controls">
+        <Property name="Text">State:</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">3, 22</Property>
+        <Property name="Name">Label42</Property>
+        <Property name="Size">34, 15</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED3" children="Controls">
         <Property name="BindingSrcPath">/gui_reset_cmd</Property>
@@ -851,19 +927,8 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">139, 127</Property>
+        <Property name="Location">139, 145</Property>
         <Property name="Name">SwitchLED3</Property>
-      </Object>
-      <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
-        <Property name="BindingSrcPath">/gui_disable_cmd</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Text">Disable</Property>
-        <Property name="MomentaryStyle">Simple</Property>
-        <Property name="Size">62, 34</Property>
-        <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">71, 127</Property>
-        <Property name="Name">SwitchLED2</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
         <Property name="BindingSrcPath">/gui_enable_cmd</Property>
@@ -873,15 +938,26 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">3, 127</Property>
+        <Property name="Location">3, 145</Property>
         <Property name="Name">SwitchLED1</Property>
+      </Object>
+      <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
+        <Property name="BindingSrcPath">/gui_disable_cmd</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Text">Disable</Property>
+        <Property name="MomentaryStyle">Simple</Property>
+        <Property name="Size">62, 34</Property>
+        <Property name="Font">Segoe UI, 9pt</Property>
+        <Property name="Location">71, 145</Property>
+        <Property name="Name">SwitchLED2</Property>
       </Object>
       <Property name="Text">System Command</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">883, 49</Property>
+      <Property name="Location">345, 12</Property>
       <Property name="Name">GroupBox8</Property>
-      <Property name="Size">207, 167</Property>
+      <Property name="Size">205, 186</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox6" children="Controls">
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
