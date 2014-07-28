@@ -63,7 +63,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">206, 550</Property>
         <Property name="Name">GaugeAngular7</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -130,7 +131,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">155, 155</Property>
+        <Property name="Size">154, 154</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">206, 389</Property>
         <Property name="Name">GaugeAngular8</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -168,7 +170,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 550</Property>
         <Property name="Name">GaugeAngular9</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -207,7 +210,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">206, 228</Property>
         <Property name="Name">GaugeAngular10</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -273,7 +277,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 389</Property>
         <Property name="Name">GaugeAngular11</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -311,7 +316,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 228</Property>
         <Property name="Name">GaugeAngular12</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -363,7 +369,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">206, 39</Property>
         <Property name="Name">GaugeAngular13</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -379,6 +386,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">51, 27</Property>
+        <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
         <Property name="Location">110, 133</Property>
         <Property name="Name">NumericDisplay18</Property>
       </Object>
@@ -414,7 +422,8 @@
           <Property name="GeneratorStyle">Fixed</Property>
         </Property>
         <Property name="InnerRadius">70</Property>
-        <Property name="Size">167, 167</Property>
+        <Property name="Size">166, 166</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 39</Property>
         <Property name="Name">GaugeAngular14</Property>
         <Property name="Text">logicVltgGuage</Property>
@@ -596,6 +605,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">191, 356</Property>
         <Property name="Name">GaugeAngular6</Property>
         <Property name="Text">GaugeAngular6</Property>
@@ -629,6 +639,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 356</Property>
         <Property name="Name">GaugeAngular5</Property>
         <Property name="Text">GaugeAngular5</Property>
@@ -662,6 +673,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">191, 198</Property>
         <Property name="Name">GaugeAngular4</Property>
         <Property name="Text">GaugeAngular4</Property>
@@ -695,6 +707,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 198</Property>
         <Property name="Name">GaugeAngular3</Property>
         <Property name="Text">GaugeAngular3</Property>
@@ -729,6 +742,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">191, 40</Property>
         <Property name="Name">GaugeAngular2</Property>
         <Property name="Text">GaugeAngular2</Property>
@@ -764,6 +778,7 @@
         </Property>
         <Property name="InnerRadius">70</Property>
         <Property name="Size">152, 152</Property>
+        <Property name="Font">Segoe UI, 10pt</Property>
         <Property name="Location">33, 40</Property>
         <Property name="Name">GaugeAngular1</Property>
         <Property name="Text">GaugeAngular1</Property>
