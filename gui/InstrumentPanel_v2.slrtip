@@ -1,332 +1,5 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InstrumentPanel" children="Controls">
-    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox5" children="Controls">
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay4" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s6</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">191, 356</Property>
-        <Property name="Name">NumericDisplay4</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay3" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s5</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">33, 356</Property>
-        <Property name="Name">NumericDisplay3</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay2" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s1</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">191, 198</Property>
-        <Property name="Name">NumericDisplay2</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay1" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s3</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">33, 198</Property>
-        <Property name="Name">NumericDisplay1</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay9" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s2</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">191, 40</Property>
-        <Property name="Name">NumericDisplay9</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay10" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s4</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">1</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">39, 27</Property>
-        <Property name="Location">33, 40</Property>
-        <Property name="Name">NumericDisplay10</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular6" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s6</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">191, 356</Property>
-        <Property name="Name">GaugeAngular6</Property>
-        <Property name="Text">GaugeAngular6</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular5" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s5</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">33, 356</Property>
-        <Property name="Name">GaugeAngular5</Property>
-        <Property name="Text">GaugeAngular5</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular4" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s1</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">191, 198</Property>
-        <Property name="Name">GaugeAngular4</Property>
-        <Property name="Text">GaugeAngular4</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular3" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s3</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">33, 198</Property>
-        <Property name="Name">GaugeAngular3</Property>
-        <Property name="Text">GaugeAngular3</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular2" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s2</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">191, 40</Property>
-        <Property name="Name">GaugeAngular2</Property>
-        <Property name="Text">GaugeAngular2</Property>
-      </Object>
-      <Object type="MW.Instruments.GaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeAngular1" children="Controls">
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/DAQ/motor_voltage_volts/s4</Property>
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="Pointers">
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-          <Item type="Iocomp.Classes.PointerGaugeAngular, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">(sub-class)</Item>
-        </Property>
-        <Property name="ScaleRange">
-          <Property name="AngleMin">198</Property>
-          <Property name="AngleSpan">126</Property>
-          <Property name="Min">-10</Property>
-          <Property name="Span">70</Property>
-          <Property name="LimitSpanLowerEnabled">True</Property>
-          <Property name="LimitMaxUpperValue">16</Property>
-        </Property>
-        <Property name="ScaleDisplay">
-          <Property name="GeneratorFixed">
-            <Property name="MajorCount">8</Property>
-            <Property name="MinorCount">4</Property>
-          </Property>
-          <Property name="GeneratorStyle">Fixed</Property>
-        </Property>
-        <Property name="InnerRadius">70</Property>
-        <Property name="Size">152, 152</Property>
-        <Property name="Location">33, 40</Property>
-        <Property name="Name">GaugeAngular1</Property>
-        <Property name="Text">GaugeAngular1</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label27" children="Controls">
-        <Property name="Text">Right</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">250, 21</Property>
-        <Property name="Name">Label27</Property>
-        <Property name="Size">34, 15</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label26" children="Controls">
-        <Property name="Text">Hip</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">1, 413</Property>
-        <Property name="Name">Label26</Property>
-        <Property name="Size">33, 17</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label5" children="Controls">
-        <Property name="Text">Front</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">1, 101</Property>
-        <Property name="Name">Label5</Property>
-        <Property name="Size">33, 13</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label6" children="Controls">
-        <Property name="Text">Back</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">1, 257</Property>
-        <Property name="Name">Label6</Property>
-        <Property name="Size">33, 15</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label3" children="Controls">
-        <Property name="Text">Left</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">77, 22</Property>
-        <Property name="Name">Label3</Property>
-        <Property name="Size">31, 15</Property>
-      </Object>
-      <Property name="Text">Motor Voltages</Property>
-      <Property name="UseCompatibleTextRendering">True</Property>
-      <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">1282, 131</Property>
-      <Property name="Name">GroupBox5</Property>
-      <Property name="Size">345, 510</Property>
-    </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox8" children="Controls">
       <Object type="MW.Instruments.LED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LED64" children="Controls">
         <Property name="OutputValue">0</Property>
@@ -376,109 +49,9 @@
       <Property name="Text">System Command</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">903, 56</Property>
+      <Property name="Location">883, 49</Property>
       <Property name="Name">GroupBox8</Property>
       <Property name="Size">207, 167</Property>
-    </Object>
-    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox7" children="Controls">
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label22" children="Controls">
-        <Property name="Text">Left Front</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">7, 104</Property>
-        <Property name="Name">Label22</Property>
-        <Property name="Size">111, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay5" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s3</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">129, 43</Property>
-        <Property name="Name">NumericDisplay5</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label23" children="Controls">
-        <Property name="Text">Left Back</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">7, 43</Property>
-        <Property name="Name">Label23</Property>
-        <Property name="Size">95, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay6" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s2</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">370, 104</Property>
-        <Property name="Name">NumericDisplay6</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label24" children="Controls">
-        <Property name="Text">Right Front</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">245, 104</Property>
-        <Property name="Name">Label24</Property>
-        <Property name="Size">119, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay7" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s1</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">370, 43</Property>
-        <Property name="Name">NumericDisplay7</Property>
-      </Object>
-      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label25" children="Controls">
-        <Property name="Text">Right Back</Property>
-        <Property name="UseCompatibleTextRendering">True</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">251, 43</Property>
-        <Property name="Name">Label25</Property>
-        <Property name="Size">113, 42</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay8" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">DAQ/logic_voltage_volts/s4</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">2</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">100, 38</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
-        <Property name="Location">129, 104</Property>
-        <Property name="Name">NumericDisplay8</Property>
-      </Object>
-      <Property name="Text">Logic Voltages</Property>
-      <Property name="UseCompatibleTextRendering">True</Property>
-      <Property name="Font">Segoe UI, 16pt</Property>
-      <Property name="Location">406, 56</Property>
-      <Property name="Name">GroupBox7</Property>
-      <Property name="Size">491, 160</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox6" children="Controls">
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
@@ -1173,7 +746,7 @@
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="BackColor">Control</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">12, 12</Property>
+      <Property name="Location">2, 10</Property>
       <Property name="Name">GroupBox6</Property>
       <Property name="Size">344, 188</Property>
     </Object>
@@ -1181,7 +754,7 @@
       <Property name="Text">Motor Temperatures</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 16pt</Property>
-      <Property name="Location">12, 240</Property>
+      <Property name="Location">8, 240</Property>
       <Property name="Name">Label1</Property>
       <Property name="Size">246, 42</Property>
     </Object>
@@ -1249,7 +822,7 @@
       <Property name="Text">Left Front</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">12, 541</Property>
+      <Property name="Location">8, 541</Property>
       <Property name="Name">GroupBox3</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1317,7 +890,7 @@
       <Property name="Text">Left Back</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">12, 285</Property>
+      <Property name="Location">8, 285</Property>
       <Property name="Name">GroupBox4</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1385,7 +958,7 @@
       <Property name="Text">Right Front</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">593, 541</Property>
+      <Property name="Location">589, 541</Property>
       <Property name="Name">GroupBox2</Property>
       <Property name="Size">575, 250</Property>
     </Object>
@@ -1453,7 +1026,7 @@
       <Property name="Text">Right Back</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 9pt</Property>
-      <Property name="Location">593, 285</Property>
+      <Property name="Location">589, 285</Property>
       <Property name="Name">GroupBox1</Property>
       <Property name="Size">575, 250</Property>
     </Object>
