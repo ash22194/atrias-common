@@ -848,7 +848,7 @@
         </Property>
         <Property name="Rotation">X270</Property>
         <Property name="Size">195, 24</Property>
-        <Property name="Location">6, 116</Property>
+        <Property name="Location">6, 119</Property>
         <Property name="Name">GaugeFluidLevel4</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel3" children="Controls">
@@ -868,12 +868,12 @@
         </Property>
         <Property name="Rotation">X270</Property>
         <Property name="Size">195, 24</Property>
-        <Property name="Location">6, 91</Property>
+        <Property name="Location">6, 93</Property>
         <Property name="Name">GaugeFluidLevel3</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel2" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/Start Controller/Saturation</Property>
+        <Property name="BindingSrcPath">atrias_system/Start Controller/Scaling Factor</Property>
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="TargetName">TargetPC1</Property>
@@ -888,7 +888,7 @@
         </Property>
         <Property name="Rotation">X270</Property>
         <Property name="Size">195, 24</Property>
-        <Property name="Location">6, 66</Property>
+        <Property name="Location">6, 67</Property>
         <Property name="Name">GaugeFluidLevel2</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel1" children="Controls">
@@ -927,7 +927,7 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">139, 145</Property>
+        <Property name="Location">139, 148</Property>
         <Property name="Name">SwitchLED3</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
@@ -938,7 +938,7 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">3, 145</Property>
+        <Property name="Location">3, 148</Property>
         <Property name="Name">SwitchLED1</Property>
       </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
@@ -949,15 +949,15 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">71, 145</Property>
+        <Property name="Location">71, 148</Property>
         <Property name="Name">SwitchLED2</Property>
       </Object>
       <Property name="Text">System Command</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">345, 12</Property>
+      <Property name="Location">345, 10</Property>
       <Property name="Name">GroupBox8</Property>
-      <Property name="Size">205, 186</Property>
+      <Property name="Size">205, 188</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox6" children="Controls">
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
