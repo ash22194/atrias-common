@@ -2783,6 +2783,16 @@
       <Property name="Size">337, 204</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox8" children="Controls">
+      <Object type="MW.Instruments.LED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LED64" children="Controls">
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="BindingSrcPath">atrias_system/p4</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="Size">24, 24</Property>
+        <Property name="Location">6, 67</Property>
+        <Property name="Name">LED64</Property>
+      </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel4" children="Controls">
         <Property name="BindingSrcObject" />
         <Property name="BindingSrcPath">atrias_system/is_error_cmd/Compare</Property>
@@ -2839,8 +2849,8 @@
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X270</Property>
-        <Property name="Size">195, 24</Property>
-        <Property name="Location">6, 67</Property>
+        <Property name="Size">171, 24</Property>
+        <Property name="Location">30, 67</Property>
         <Property name="Name">GaugeFluidLevel2</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel1" children="Controls">
