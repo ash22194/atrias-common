@@ -255,6 +255,30 @@
       <Property name="Size">367, 170</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox1" children="Controls">
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay142" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/Demux Diags/p13</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">0</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">24, 24</Property>
+        <Property name="Font">Segoe UI, 8pt</Property>
+        <Property name="Location">174, 24</Property>
+        <Property name="Name">NumericDisplay142</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label87" children="Controls">
+        <Property name="TextAlign">MiddleLeft</Property>
+        <Property name="Text">Controller Fault:</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="Location">75, 24</Property>
+        <Property name="Name">Label87</Property>
+        <Property name="Size">90, 24</Property>
+      </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay135" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
@@ -267,7 +291,7 @@
         </Property>
         <Property name="Size">24, 24</Property>
         <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">41, 23</Property>
+        <Property name="Location">41, 24</Property>
         <Property name="Name">NumericDisplay135</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label78" children="Controls">
@@ -275,7 +299,7 @@
         <Property name="Text">Halt:</Property>
         <Property name="UseCompatibleTextRendering">True</Property>
         <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">3, 22</Property>
+        <Property name="Location">5, 22</Property>
         <Property name="Name">Label78</Property>
         <Property name="Size">34, 24</Property>
       </Object>

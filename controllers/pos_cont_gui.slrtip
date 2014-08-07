@@ -89,6 +89,15 @@
       <Property name="Size">167, 102</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox1" children="Controls">
+      <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
+        <Property name="BindingSrcPath">/sat_estops</Property>
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Text">Saturation Estops</Property>
+        <Property name="Size">78, 54</Property>
+        <Property name="Location">110, 21</Property>
+        <Property name="Name">SwitchLED1</Property>
+      </Object>
       <Object type="MW.Instruments.NumericalUpDownEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericalUpDownEntry2" children="Controls">
         <Property name="BindingSrcPath">/hip_sat</Property>
         <Property name="TargetName">TargetPC1</Property>
@@ -133,7 +142,7 @@
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
       <Property name="Location">12, 12</Property>
       <Property name="Name">GroupBox1</Property>
-      <Property name="Size">97, 82</Property>
+      <Property name="Size">197, 82</Property>
     </Object>
     <Property name="ClientSize">1920, 1080</Property>
   </Object>

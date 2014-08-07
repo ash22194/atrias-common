@@ -9,3 +9,6 @@ leg_p = 500;
 leg_d = 40;
 hip_p = 1500;
 hip_d = 10;
+
+% Safety control
+sat_estops = true;
