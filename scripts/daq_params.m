@@ -128,3 +128,6 @@ INC_ENC_DIRS         = -[ LEG1_MOTOR_A_DIRECTION
                           LEG2_MOTOR_A_DIRECTION
                           LEG2_MOTOR_B_DIRECTION ];
 MEDULLA_TIMER_FREQ = 32e6;
+
+% The distance between the hip pivot and the leg motors pivot (the center of the leg)
+HIP_WIDTH = .18;
