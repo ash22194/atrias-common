@@ -11,4 +11,4 @@ hip_p = 1500;
 hip_d = 10;
 
 % Safety control
-sat_estops = true;
+sat_estops = false;
