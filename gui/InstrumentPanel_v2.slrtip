@@ -58,7 +58,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 271</Property>
         <Property name="Name">NumericDisplay140</Property>
       </Object>
@@ -87,7 +87,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 221</Property>
         <Property name="Name">NumericDisplay141</Property>
       </Object>
@@ -119,7 +119,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 71</Property>
         <Property name="Name">NumericDisplay138</Property>
       </Object>
@@ -151,7 +151,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 171</Property>
         <Property name="Name">NumericDisplay139</Property>
       </Object>
@@ -183,7 +183,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 21</Property>
         <Property name="Name">NumericDisplay137</Property>
       </Object>
@@ -215,7 +215,7 @@
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
         <Property name="Size">72, 50</Property>
-        <Property name="Font">Segoe UI, 16pt</Property>
+        <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 121</Property>
         <Property name="Name">NumericDisplay136</Property>
       </Object>
