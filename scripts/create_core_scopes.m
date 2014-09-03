@@ -27,7 +27,7 @@ for i=1:number_of_fscopes
 end
 set(fscopes(1:number_of_fscopes), ...
     {'NumSamples', 'Decimation', 'WriteMode', 'AutoRestart', 'DynamicFileName'}, ...
-    {num_samples,  decimiation,  'Lazy',      'on',          'on'});
+    {num_samples,  decimation,  'Lazy',      'on',          'on'});
 
 % Position data
 set(fscopes(1),'FileName','E:\POS_<%%%>.dat');
@@ -101,6 +101,8 @@ fscopes(3).addsignal(getsignalid(tg,[daq_path 'EtherCAT Init/s4']));
 fscopes(3).addsignal(getsignalid(tg,[daq_path 'EtherCAT Init/s5']));
 fscopes(3).addsignal(getsignalid(tg,[daq_path 'EtherCAT Init/s6']));
 
+fscopes.start();
+
 %% Setup target scopes
 decimation = update_freq / 250;
 num_samples = 250;
@@ -130,3 +132,4 @@ tscopes(2).addsignal(getsignalid(tg,[daq_path 'q_signals_degrees/s11'])); % boom
 tscopes(2).addsignal(getsignalid(tg,[daq_path 'q_signals_degrees/s13'])); % boom pitch
 tscopes(2).addsignal(getsignalid(tg,[daq_path 'q_signals_degrees/s12'])); % boom yaw
 
+tscopes.start();
