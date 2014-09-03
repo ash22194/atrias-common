@@ -14,8 +14,8 @@
 %   trans = motor encoders
 
 % Update rates
-update_freq = 1000; %Hz
-sample_time = 1/update_freq; % seconds
+sample_time = 0.001; % seconds
+update_freq = 1/sample_time; % Hz
 
 % Medulla state parameters
 MEDULLA_STATE_IDLE  = 0;
@@ -115,7 +115,7 @@ fcut_unwrap = 8*(2*pi); % Hz, low pass filter cutoff frequency for unwrapping an
 max_encoder_velocity = 200; % rad/s, max rate which encoder values can change
 sensor_start_time = 8; % s
 % two pole low-pass filter params for velocity estimation
-fcut_velocity = 60*(2*pi); % Hz, low pass filter cutoff frequency for velocities
+fcut_velocity = 100*(2*pi); % Hz, low pass filter cutoff frequency for velocities
 lpf_damping = sqrt(2)/2;
 B1_lpf_velocity = -2*exp(-lpf_damping*fcut_velocity*sample_time)*cos(fcut_velocity*sample_time*sqrt(1-lpf_damping^2));
 B2_lpf_velocity = exp(-2*lpf_damping*fcut_velocity*sample_time);

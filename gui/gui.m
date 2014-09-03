@@ -119,18 +119,17 @@ function parameter_table_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 %data = cell(27,2);
-data = {'Motor Torque Saturation','UpperLimit',0
+data = {'','run_trajectory',0
+        '','kp_length',0
+        '','kd_length',0
+        '','kp_angle',0
+        '','kd_angle',0
+        'Motor Torque Saturation','UpperLimit',0
         'Motor Torque Saturation','LowerLimit',0
         '','kp_sea_torque',0
         '','k_ff',0
-        '','kp_flight',0
-        '','kp_leg_angle',0
-        '','kd_leg_angle',0.
-        
         '','k_placement',0
         '','dx_avg_desired',0
-        'Empty','',0
-        'Empty','',0
         'Empty','',0
         'Empty','',0
         'Empty','',0
