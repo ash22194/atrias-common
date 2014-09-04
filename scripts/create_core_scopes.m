@@ -14,7 +14,7 @@ if ~isempty(scopes)
 end
 
 %% Path to data acquisition block
-daq_path = 'DAQ/';
+daq_path = 'atrias_system/DAQ/';
 
 %% Setup core file scopes
 logging_freq = 250;

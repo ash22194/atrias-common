@@ -131,3 +131,6 @@ MEDULLA_TIMER_FREQ = 32e6;
 
 % The distance between the hip pivot and the leg motors pivot (the center of the leg)
 HIP_WIDTH = .18;
+
+% Whether or not to enable sensor decoding for each medulla in the DAQ
+imu_daq_enable = true;
