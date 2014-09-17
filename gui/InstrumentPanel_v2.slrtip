@@ -5,34 +5,27 @@
         <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay153" children="Controls">
           <Property name="BindingSrcType">None</Property>
           <Property name="OutputValue">0</Property>
-          <Property name="BindingSrcPath">
-          </Property>
+          <Property name="BindingSrcPath" />
           <Property name="BindingSrcObject" />
-          <Property name="TargetName">
-          </Property>
+          <Property name="TargetName" />
           <Property name="Size">48, 24</Property>
           <Property name="Font">Segoe UI, 8pt</Property>
           <Property name="Location">132, 141</Property>
           <Property name="Name">NumericDisplay153</Property>
         </Object>
         <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED4" children="Controls">
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="BindingSrcType">None</Property>
-          <Property name="Text">
-          </Property>
+          <Property name="Text" />
           <Property name="MomentaryStyle">Simple</Property>
           <Property name="Size">48, 24</Property>
           <Property name="Location">132, 117</Property>
           <Property name="Name">SwitchLED4</Property>
         </Object>
         <Object type="MW.Instruments.NumericalUpDownEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericalUpDownEntry3" children="Controls">
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="BindingSrcType">None</Property>
           <Property name="Font">Segoe UI, 9.5pt</Property>
           <Property name="Location">120, 93</Property>
@@ -40,22 +33,17 @@
           <Property name="Size">72, 24</Property>
         </Object>
         <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED5" children="Controls">
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="BindingSrcType">None</Property>
-          <Property name="Text">
-          </Property>
+          <Property name="Text" />
           <Property name="Size">48, 24</Property>
           <Property name="Location">132, 69</Property>
           <Property name="Name">SwitchLED5</Property>
         </Object>
         <Object type="MW.Instruments.NumericalUpDownEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericalUpDownEntry4" children="Controls">
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="BindingSrcType">None</Property>
           <Property name="Font">Segoe UI, 9.5pt</Property>
           <Property name="Location">120, 45</Property>
@@ -63,10 +51,8 @@
           <Property name="Size">72, 24</Property>
         </Object>
         <Object type="MW.Instruments.NumericalUpDownEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericalUpDownEntry5" children="Controls">
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="BindingSrcType">None</Property>
           <Property name="Font">Segoe UI, 9.5pt</Property>
           <Property name="Location">120, 21</Property>
@@ -146,10 +132,8 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">None</Property>
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="Size">24, 24</Property>
           <Property name="Location">144, 67</Property>
           <Property name="Name">LED3</Property>
@@ -158,10 +142,8 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">None</Property>
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="Size">24, 24</Property>
           <Property name="Location">144, 43</Property>
           <Property name="Name">LED2</Property>
@@ -169,11 +151,9 @@
         <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay154" children="Controls">
           <Property name="BindingSrcType">None</Property>
           <Property name="OutputValue">0</Property>
-          <Property name="BindingSrcPath">
-          </Property>
+          <Property name="BindingSrcPath" />
           <Property name="BindingSrcObject" />
-          <Property name="TargetName">
-          </Property>
+          <Property name="TargetName" />
           <Property name="Size">48, 24</Property>
           <Property name="Font">Segoe UI, 8pt</Property>
           <Property name="Location">132, 91</Property>
@@ -183,10 +163,8 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">None</Property>
-          <Property name="BindingSrcPath">
-          </Property>
-          <Property name="TargetName">
-          </Property>
+          <Property name="BindingSrcPath" />
+          <Property name="TargetName" />
           <Property name="Size">24, 24</Property>
           <Property name="Location">144, 19</Property>
           <Property name="Name">LED65</Property>
@@ -239,7 +217,7 @@
         <Property name="Name">GroupBox13</Property>
         <Property name="Size">197, 117</Property>
       </Object>
-      <Property name="Text">IMU</Property>
+      <Property name="Text">IMU [inactive]</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="BackColor">Control</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
@@ -253,7 +231,7 @@
         <Property name="TargetName">TargetPC1</Property>
         <Property name="BindingSrcType">Parameter</Property>
         <Property name="Maximum">30</Property>
-        <Property name="Location">131, 52</Property>
+        <Property name="Location">175, 51</Property>
         <Property name="Name">NumericalUpDownEntry2</Property>
         <Property name="Size">120, 25</Property>
       </Object>
@@ -262,36 +240,36 @@
         <Property name="TargetName">TargetPC1</Property>
         <Property name="BindingSrcType">Parameter</Property>
         <Property name="Maximum">30</Property>
-        <Property name="Location">131, 20</Property>
+        <Property name="Location">175, 20</Property>
         <Property name="Name">NumericalUpDownEntry1</Property>
         <Property name="Size">120, 25</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label92" children="Controls">
         <Property name="TextAlign">MiddleLeft</Property>
-        <Property name="Text">Max. Starting Speed:</Property>
+        <Property name="Text">Max. Starting Speed (rad/s):</Property>
         <Property name="UseCompatibleTextRendering">True</Property>
         <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
         <Property name="ForeColor">Black</Property>
         <Property name="Location">5, 52</Property>
         <Property name="Name">Label92</Property>
-        <Property name="Size">118, 24</Property>
+        <Property name="Size">166, 24</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label91" children="Controls">
         <Property name="TextAlign">MiddleLeft</Property>
-        <Property name="Text">Max. Motor Speed:</Property>
+        <Property name="Text">Max. Gear Speed (rad/s):</Property>
         <Property name="UseCompatibleTextRendering">True</Property>
         <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
         <Property name="ForeColor">Black</Property>
         <Property name="Location">5, 23</Property>
         <Property name="Name">Label91</Property>
-        <Property name="Size">118, 24</Property>
+        <Property name="Size">166, 24</Property>
       </Object>
       <Property name="Text">Limits</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
       <Property name="Location">2, 550</Property>
       <Property name="Name">GroupBox10</Property>
-      <Property name="Size">258, 86</Property>
+      <Property name="Size">313, 86</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox9" children="Controls">
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay140" children="Controls">
@@ -540,7 +518,7 @@
         <Property name="Name">Label86</Property>
         <Property name="Size">76, 50</Property>
       </Object>
-      <Property name="Text">Controller Commands</Property>
+      <Property name="Text">Controller Commands [Nm]</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
       <Property name="Location">556, 263</Property>
@@ -560,7 +538,7 @@
         </Property>
         <Property name="Size">24, 24</Property>
         <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">174, 57</Property>
+        <Property name="Location">196, 57</Property>
         <Property name="Name">NumericDisplay152</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay151" children="Controls">
@@ -585,7 +563,7 @@
         <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
         <Property name="Location">79, 56</Property>
         <Property name="Name">Label90</Property>
-        <Property name="Size">90, 24</Property>
+        <Property name="Size">111, 24</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label89" children="Controls">
         <Property name="TextAlign">MiddleLeft</Property>
@@ -608,7 +586,7 @@
         </Property>
         <Property name="Size">24, 24</Property>
         <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">174, 24</Property>
+        <Property name="Location">196, 24</Property>
         <Property name="Name">NumericDisplay142</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label87" children="Controls">
@@ -616,7 +594,7 @@
         <Property name="Text">Controller Fault:</Property>
         <Property name="UseCompatibleTextRendering">True</Property>
         <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
-        <Property name="Location">79, 24</Property>
+        <Property name="Location">95, 22</Property>
         <Property name="Name">Label87</Property>
         <Property name="Size">90, 24</Property>
       </Object>
@@ -649,7 +627,7 @@
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
       <Property name="Location">3, 642</Property>
       <Property name="Name">GroupBox1</Property>
-      <Property name="Size">205, 92</Property>
+      <Property name="Size">244, 92</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox2" children="Controls">
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay143" children="Controls">
@@ -4112,5 +4090,5 @@
       <Property name="Size">337, 188</Property>
     </Object>
     <Property name="BackColor">Control</Property>
-    <Property name="ClientSize">1920, 1080</Property>
+    <Property name="ClientSize">1920, 1200</Property>
   </Object>
