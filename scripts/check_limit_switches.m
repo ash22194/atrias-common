@@ -45,4 +45,5 @@ for i=1:number_of_signals
 end
 
 figure('name','Limit Switches');
-plot(limit.data(:, 1:4))
+plot(limit.data(:,end),limit.data(:, 1:4))
+legend('Back Right', 'Front Right', 'Back Left', 'Front Left');

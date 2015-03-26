@@ -119,33 +119,33 @@ function parameter_table_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 %data = cell(27,2);
-data = {'','run_trajectory',0
+data = {'','dx_avg_desired',0
+        '','k_placement',0
         '','kp_motor',0
         '','kd_motor',0
-        '','reset_leg_length',0
-        '','reset_leg_angle',0
-        '','time_to_apex',0
-        'Empty','',0
         '','kp_sea_torque',0
         '','k_ff',0
-        '','k_placement',0
-        '','dx_avg_desired',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
-        'Empty','',0
+        '','alpha_apex_modifier',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
+        '','',0
         };
 set(hObject, 'Data', data);
 PopulateTableValues(hObject);
