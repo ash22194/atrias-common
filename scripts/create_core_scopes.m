@@ -7,11 +7,11 @@
 tg.SampleTime = 0.0009982;
 
 %% Remove old scopes
-scopes = tg.getscope();
-if ~isempty(scopes) 
-    scopes.stop;
-    tg.remscope(1:size(scopes,1));
-end
+% scopes = tg.getscope();
+% if ~isempty(scopes) 
+%     scopes.stop;
+%     tg.remscope(1:size(scopes,1));
+% end
 
 %% Path to data acquisition block
 daq_path = 'atrias_system/DAQ/';
