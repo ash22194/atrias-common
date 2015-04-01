@@ -4,6 +4,7 @@
 %   Also tweaks model sample time to ensure EtherCAT synchronization.
 
 %% Augment target machine sample time to synchronize DC clocks
+tg = slrt;
 tg.SampleTime = 0.0009982;
 
 %% Remove old scopes
