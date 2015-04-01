@@ -22,7 +22,7 @@ function varargout = gui(varargin)
 
 % Edit the above text to modify the response to help gui
 
-% Last Modified by GUIDE v2.5 11-Oct-2013 13:17:24
+% Last Modified by GUIDE v2.5 01-Apr-2015 14:52:00
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -210,8 +210,9 @@ function reload_model_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 tg = evalin('base','tg');
 tg.load(tg.Application);
-evalin('base','init_scopes');
+msgbox('Model Reloaded!');
 PopulateTableValues(handles.parameter_table);
+evalin('base','init_scopes');
 
 
 % --- Executes on button press in start_model.
@@ -238,3 +239,12 @@ function plot_data_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 set(handles.xpc_gui, 'HandleVisibility', 'off');
 evalin('base','plot_file_scopes');
+
+
+% --- Executes on button press in initialize_scopes.
+function initialize_scopes_Callback(hObject, eventdata, handles)
+% hObject    handle to initialize_scopes (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+set(handles.xpc_gui, 'HandleVisibility', 'off');
+evalin('base','init_scopes');
