@@ -40,9 +40,10 @@ N_hip = r_hip_shaft / r_hip_gearhead;
 l_seg = 0.5; % m
 
 %% Full Robot
-m_total_real = 60.4120; % kg (measured with boom attached)
+m_total_real = 64; % kg (measured with boom attached)
 m_total_with_counterweight = m_total_real - m_counter_weight; % kg
 i_robot = 4.0; % kg m^2 (torso ~2.2)
+i_torso = 2.2;
 d_y_mount_to_hip = 0.3176; % m
 d_y_com = 0.1; % m (distance above saggital rotation point)
 d_y_mount_to_com = d_y_mount_to_hip - d_y_com; % m

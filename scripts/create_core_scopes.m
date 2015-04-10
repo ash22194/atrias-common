@@ -90,6 +90,13 @@ fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signal
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s4')); % backL
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s5')); % frontL
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s6')); % latL
+% Elmo torques
+fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s1')); 
+fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s2')); 
+fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s3'));
+fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s4'));
+
+
 
 % Supervisory data
 set(fscopes(3),'FileName','E:\SUPR_<%%%>.dat');
