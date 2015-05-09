@@ -21,7 +21,7 @@ system_path = 'atrias_system/';
 %% Setup core file scopes
 logging_freq = 250;
 decimation = update_freq / logging_freq;
-num_samples = 1000;
+num_samples = 4*logging_freq;
 number_of_fscopes = 4;
 fscopes = [];
 for i=1:number_of_fscopes
@@ -62,18 +62,28 @@ fscopes(1).addsignal(getsignalid(tg,[system_path 'dq_signals/s11'])); % boom rol
 fscopes(1).addsignal(getsignalid(tg,[system_path 'dq_signals/s12'])); % boom yaw 
 fscopes(1).addsignal(getsignalid(tg,[system_path 'dq_signals/s13'])); % boom pitch
 % Rotor
-fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s1']));
-fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s2']));
-fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s3']));
-fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s4']));
+fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s1'])); % 27
+fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s2'])); % 28
+fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s3'])); % 29
+fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s4'])); % 30
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s5'])); % 31
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_pos/s6'])); % 32
-fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s1']));
+fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s1'])); % 33
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s2']));
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s3']));
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s4']));
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s5'])); % 37
 fscopes(1).addsignal(getsignalid(tg,[system_path 'rotor_vel/s6'])); % 38
+% Raw renishaws
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s1']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s2']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s3']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s4']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s5']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s6']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s7']));
+fscopes(1).addsignal(getsignalid(tg,[daq_path 'raw_encoder_signals/s8']));
+
 
 % Torque data
 set(fscopes(2),'FileName','E:\TORQ_<%%%>.dat');
@@ -97,8 +107,6 @@ fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s2'));
 fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s3'));
 fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s4'));
 
-
-
 % Supervisory data
 set(fscopes(3),'FileName','E:\SUPR_<%%%>.dat');
 % Limit switches
@@ -114,7 +122,6 @@ fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s4']));
 fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s5']));
 fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s6']));
 fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s7']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s8']));
 % Ethercat info
 fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s1']));
 fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s2']));
@@ -131,7 +138,14 @@ fscopes(4).addsignal(getsignalid(tg,'imu_data/s3'));
 fscopes(4).addsignal(getsignalid(tg,'imu_data/s4'));
 fscopes(4).addsignal(getsignalid(tg,'imu_data/s5'));
 fscopes(4).addsignal(getsignalid(tg,'imu_data/s6'));
-
+fscopes(4).addsignal(getsignalid(tg,'imu_positions/s1'));
+fscopes(4).addsignal(getsignalid(tg,'imu_positions/s2'));
+fscopes(4).addsignal(getsignalid(tg,'imu_positions/s3'));
+fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s1'));
+fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s2'));
+fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s3'));
+fscopes(4).addsignal(getsignalid(tg,'imu_debug/s1'));
+fscopes(4).addsignal(getsignalid(tg,'imu_debug/s2'));
 fscopes.start();
 
 %% Setup target scopes
