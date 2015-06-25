@@ -22,7 +22,7 @@ system_path = 'atrias_system/';
 logging_freq = 250;
 decimation = update_freq / logging_freq;
 num_samples = 4*logging_freq;
-number_of_fscopes = 4;
+number_of_fscopes = 3;
 fscopes = [];
 for i=1:number_of_fscopes
     fscopes = [fscopes tg.addscope('file')];
@@ -101,51 +101,38 @@ fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signal
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s4')); % backL
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s5')); % frontL
 fscopes(2).addsignal(getsignalid(tg,'Control/Actuator Control/tau_desired_signals/s6')); % latL
-% Elmo torques
-fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s1')); 
-fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s2')); 
-fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s3'));
-fscopes(2).addsignal(getsignalid(tg,'elmo_torque/s4'));
-
-% Supervisory data
-set(fscopes(3),'FileName','E:\SUPR_<%%%>.dat');
-% Limit switches
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'sw/s2']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'sw/s4']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'sw/s6']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'sw/s8']));
 % Error flags
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s1']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s2']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s3']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s4']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s5']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s6']));
-fscopes(3).addsignal(getsignalid(tg,[daq_path 'error_flags/s7']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s1']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s2']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s3']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s4']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s5']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s6']));
+fscopes(2).addsignal(getsignalid(tg,[daq_path 'error_flags/s7']));
 % Ethercat info
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s1']));
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s2']));
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s3']));
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s4']));
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s5']));
-fscopes(3).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s6']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s1']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s2']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s3']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s4']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s5']));
+fscopes(2).addsignal(getsignalid(tg,[system_path 'EtherCAT Init/s6']));
 
 % IMU data
-set(fscopes(4),'FileName','E:\IMU_<%%%>.dat');
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s1'));
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s2'));
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s3'));
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s4'));
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s5'));
-fscopes(4).addsignal(getsignalid(tg,'imu_data/s6'));
-fscopes(4).addsignal(getsignalid(tg,'imu_positions/s1'));
-fscopes(4).addsignal(getsignalid(tg,'imu_positions/s2'));
-fscopes(4).addsignal(getsignalid(tg,'imu_positions/s3'));
-fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s1'));
-fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s2'));
-fscopes(4).addsignal(getsignalid(tg,'imu_velocities/s3'));
-fscopes(4).addsignal(getsignalid(tg,'imu_debug/s1'));
-fscopes(4).addsignal(getsignalid(tg,'imu_debug/s2'));
+set(fscopes(3),'FileName','E:\IMU_<%%%>.dat');
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s1'));
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s2'));
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s3'));
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s4'));
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s5'));
+fscopes(3).addsignal(getsignalid(tg,'imu_data/s6'));
+fscopes(3).addsignal(getsignalid(tg,'imu_positions/s1'));
+fscopes(3).addsignal(getsignalid(tg,'imu_positions/s2'));
+fscopes(3).addsignal(getsignalid(tg,'imu_positions/s3'));
+fscopes(3).addsignal(getsignalid(tg,'imu_velocities/s1'));
+fscopes(3).addsignal(getsignalid(tg,'imu_velocities/s2'));
+fscopes(3).addsignal(getsignalid(tg,'imu_velocities/s3'));
+fscopes(3).addsignal(getsignalid(tg,'imu_debug/s1'));
+fscopes(3).addsignal(getsignalid(tg,'imu_debug/s2'));
 fscopes.start();
 
 %% Setup target scopes

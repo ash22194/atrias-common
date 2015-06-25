@@ -125,7 +125,7 @@ BOOM_ROLL_CAL_VALUE_TICKS = 83345; %Roll encoder value for calibration point
 % Soft limits for motor positions
 limExt = 0.1;
 MOTOR_POSITION_LIMITS_UPPER = [3.60-limExt; 4.78-limExt; 2.47-0.3]; % A B retraction
-MOTOR_POSITION_LIMITS_LOWER = [1.51+limExt; 2.68+limExt; 0.4007+0.0]; % A B extension
+MOTOR_POSITION_LIMITS_LOWER = [1.51+limExt; 2.68+limExt; 0.2831+0.0]; % A B extension
 
 %% params for DAQ functions
 fcut_smooth = 16*(2*pi); % Hz, low pass filter cutoff frequency for removing encoder dropouts

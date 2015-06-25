@@ -1,9 +1,6 @@
-% Motor output ramp times
-control_start_time = 10;
-
 % SEA control params
 max_sagittal_loaded_torque = min(MTR_MAX_CURRENT, LEG_CURRENT_LIMIT)*LEG_MOTOR_CONSTANT*LEG_MTR_GEAR_RATIO;
-max_sagittal_unloaded_torque = 1.5*178.5; % Nm
+max_sagittal_unloaded_torque = 2*1.5*178.5; % Nm
 %-- Low Pass filter for acceleration
 fcut_acceleration = 60*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
 lpf_damping = sqrt(2)/2; % butterworth damping ratio
@@ -11,7 +8,7 @@ B1_lpf_accel = -2*exp(-lpf_damping*fcut_acceleration*sample_time)*cos(fcut_accel
 B2_lpf_accel = exp(-2*lpf_damping*fcut_acceleration*sample_time);
 A_lpf_accel = 1 + B1_lpf_accel + B2_lpf_accel;
 %-- Low Pass filter for torque derivative
-fcut_dtau = 20*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
+fcut_dtau = 60*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
 lpf_damping = sqrt(2)/2; % butterworth damping ratio
 B1_lpf_dtau = -2*exp(-lpf_damping*fcut_dtau*sample_time)*cos(fcut_dtau*sample_time*sqrt(1-lpf_damping^2));
 B2_lpf_dtau = exp(-2*lpf_damping*fcut_dtau*sample_time);

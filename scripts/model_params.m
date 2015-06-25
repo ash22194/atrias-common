@@ -16,16 +16,19 @@ d_vertical_mount_offset = d_horizontal_mount_offset * tan(boom_mount_angle); % m
 l_boom_projected = l_boom + norm([d_horizontal_mount_offset, d_vertical_mount_offset]) ; % distance of boom projected to frontal centerline
 
 %% Lateral Motion
+lateral_motor_efficiency = 0.80;
 lateral_offset = 0.1831; % m
 r_hip_gearhead = 0.009525;
 r_hip_shaft = 0.542925;
 N_hip = r_hip_shaft / r_hip_gearhead;
+
 
 %% Series Elastic Actuators
 % (old values: 4118.3, [4255.0 4525.3 4372.1 4322.4])
 k_sea = [3343, 3825, 3476, 3905]; % [Nm/rad] (RB RF LB LF), Identified using force plate
 
 %% Saggital Motion
+sagittal_motor_efficiency = 0.70;
 m_leg_motor = 18; % kg
 com_leg_motor = [0, lateral_offset-0.0149, 0.029]; % m, Coordinates from pelvis for left leg. Flip y coordinate for right leg.
 i_leg_motor = [0.29, 0.27,  0.10];

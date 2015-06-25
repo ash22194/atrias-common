@@ -130,9 +130,9 @@ end
 function [alpha1, beta1, l1] = left_leg_IK(pelvis2foot, r)
   xf = pelvis2foot(1); yf = pelvis2foot(2); zf = pelvis2foot(3);
   l1 = sqrt(max(0,xf^2+yf^2+zf^2-r^2));
-  alpha1 = atan2(xf, -sqrt(l1^2-xf^2)); % assumes alpha1 > 90
-  beta1_a = 2*atan((yf-sqrt(yf^2+zf^2-r^2))/ (r+zf));
-  beta1_b = 2*atan((yf+sqrt(yf^2+zf^2-r^2))/ (r+zf));
+  alpha1 = atan2(xf, -sqrt(max(0,l1^2-xf^2))); % assumes alpha1 > 90
+  beta1_a = 2*atan((yf-sqrt(max(0,yf^2+zf^2-r^2)))/ (r+zf));
+  beta1_b = 2*atan((yf+sqrt(max(0,yf^2+zf^2-r^2)))/ (r+zf));
   error_a = (r*sin(beta1_a)-l1*cos(alpha1)*cos(beta1_a) - yf)^2 + ...
             (r*cos(beta1_a)+l1*cos(alpha1)*sin(beta1_a) - zf)^2;
   error_b = (r*sin(beta1_b)-l1*cos(alpha1)*cos(beta1_b) - yf)^2 + ...
