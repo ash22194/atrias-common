@@ -7,6 +7,7 @@ currentFolder = fileparts(mfilename('fullpath'));
 addpath([currentFolder '/atrias-robot/']);
 
 % Set build directory
+if ~exist('build','dir'), mkdir('build'); end
 set_param(0, 'CacheFolder', [currentFolder '/build']);
 set_param(0, 'CodeGenFolder', [currentFolder '/build']);
 
