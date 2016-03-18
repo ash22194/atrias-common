@@ -5,6 +5,8 @@ close all; clear all; path(pathdef); clc;
 
 currentFolder = fileparts(mfilename('fullpath'));
 addpath([currentFolder '/atrias-robot/']);
+addpath([currentFolder '/logging/']);
+addpath([currentFolder '/functions/']);
 
 % Set build directory
 if ~exist('build','dir'), mkdir('build'); end
