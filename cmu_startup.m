@@ -7,6 +7,7 @@ currentFolder = fileparts(mfilename('fullpath'));
 addpath([currentFolder '/atrias-robot/']);
 addpath([currentFolder '/logging/']);
 addpath([currentFolder '/functions/']);
+addpath([currentFolder '/scripts/']);
 
 % Set build directory
 if ~exist('build','dir'), mkdir('build'); end
@@ -15,6 +16,7 @@ set_param(0, 'CodeGenFolder', [currentFolder '/build']);
 
 % Set workspace variables
 daq_params_cmu;
+model_params;
 
 %% Check system is PC based
 % if ispc
