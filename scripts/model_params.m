@@ -5,15 +5,9 @@
 g = 9.803; % m/s
 
 %% Boom
-m_boom = 4.49; % kg
+m_boom = 4.49 + 3; % kg
 l_boom = 1.767; % m, length of boom
 h_boom = 0.99; % m, height of boom center
-l_yaw_center_to_pelvis = 1.978; % m, distance from center of boom circle to unpitched pelvis
-boom_pelvis_offset_angle = 0.174439; % rad, angle offset between above line and boom roll
-boom_mount_angle = 7.2824 * pi/180; % rad, angle offset due to boom mount
-d_horizontal_mount_offset = 0.22339; % m, horizontal distance from center of boom attachment to frontal centerline
-d_vertical_mount_offset = d_horizontal_mount_offset * tan(boom_mount_angle); % m, vertical distance from center of boom attachment to frontal centerline
-l_boom_projected = l_boom + norm([d_horizontal_mount_offset, d_vertical_mount_offset]) ; % distance of boom projected to frontal centerline
 
 %% Lateral Motion
 lateral_motor_efficiency = 0.65;
@@ -49,8 +43,8 @@ l_seg_lower = 0.09 + d_ankle_to_foot; % m
 
 %% Full Robot
 m_total_real = 62.591; % kg (measured on force plate with boom attached)
+if robot_is_attached_to_boom, m_total_real = m_total_real + m_boom/2; end
 d_vertical_mount_to_hip = 0.3176; % m
-d_vertical_boom_hip_offset = d_vertical_mount_to_hip + d_vertical_mount_offset; % distance from (boom attachment projected onto frontal center) to (hip rotation point)
 
 %% Counterweight
 m_counter_weight = 24.05; % kg
@@ -59,11 +53,22 @@ g_reduced = (m_total_real-m_counter_weight)/m_total_real*g; % effective gravity 
 
 %% Torso
 m_torso = m_total_real - 2*(m_leg_motor+m_leg);
+m_body = m_total_real - 2*m_leg;
 com_torso = [0.01, 0, 0.2885]; % m, Coordinates from pelvis.
+%if robot_is_attached_to_boom, com_torso(2) = -0.1; end
 i_torso = [1.5, 2.2, 1.5];
 torso_centerline_roll_offset_angle = atan2(-com_torso(2), com_torso(3));
 torso_centerline_pitch_offset_angle = atan2(com_torso(1), com_torso(3)); % IMU is 1.1115 degrees higher than boom
 pelvis_to_imu = [0.11988, -0.16071+0.07366/2, 0.47675];
+
+%% Extra boom quantities
+l_yaw_center_to_pelvis = 1.978; % m, distance from center of boom circle to unpitched pelvis
+boom_pelvis_offset_angle = 0.174439; % rad, angle offset between above line and boom roll
+boom_mount_angle = 7.2824 * pi/180; % rad, angle offset due to boom mount
+d_horizontal_mount_offset = 0.22339; % m, horizontal distance from center of boom attachment to frontal centerline
+d_vertical_mount_offset = d_horizontal_mount_offset * tan(boom_mount_angle); % m, vertical distance from center of boom attachment to frontal centerline
+l_boom_projected = l_boom + norm([d_horizontal_mount_offset, d_vertical_mount_offset]) ; % distance of boom projected to frontal centerline
+d_vertical_boom_hip_offset = d_vertical_mount_to_hip + d_vertical_mount_offset; % distance from (boom attachment projected onto frontal center) to (hip rotation point)
 
 %% Approximate (static) total system COM distances and inertia
 d_vertical_com = norm(com_torso([1 3]))*m_torso/m_total_real; % m, Distance above saggital rotation point. 

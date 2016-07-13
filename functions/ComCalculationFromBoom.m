@@ -1,9 +1,9 @@
-%% Computes COM location of robot using the boom encoders
+%% Computes COM location of torso using the boom encoders
 % Origin is at center of boom circle floor
-% Assumes COM is stationary on ATRIAS
 % x = forward
 % y = left
 % z = up
+% roll, pitch, yaw are from boom encoders
 function [ x_com, dx_com, z_com, dz_com, y_com, dy_com] = ComCalculationFromBoom( qRoll, dqRoll, qYaw, dqYaw, qPitch, dqPitch, ...
                                                                l_boom_projected, h_boom, boom_mount_angle, d_vertical_boom_com_offset )
 

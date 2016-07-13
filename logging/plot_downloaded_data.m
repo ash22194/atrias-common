@@ -6,7 +6,7 @@ t_select = t>=t_start & t<=t_end;
 q = q_recorded(t_select,:);
 dq = dq_recorded(t_select,:);
 tau = tau_recorded(t_select,:);
-t = time_recorded(t_select);
+t = time_recorded(t_select)*correctedSampleTime/sample_time;
 if exist('qinc_recorded','var') && size(qinc_recorded,1) == length(time_recorded)
     qinc = qinc_recorded(t_select,:);
     dqinc = dqinc_recorded(t_select,:);
@@ -35,6 +35,13 @@ if exist('elmo_torque_demands_recorded','var') && length(elmo_torque_demands_rec
     elmo_torque_demands = elmo_torque_demands_recorded(t_select,:);
 end
 
+% When motors were enabled
+motors_enabled = motors_enabled_recorded(t_select,:);
+motors_on = [0; diff(motors_enabled)] == 1;
+motors_off = [diff(motors_enabled); 0] == -1;
+fprintf('Motors enabled at t=%f s\n',t(motors_on));
+fprintf('Motors disabled at t=%f s\n',t(motors_off));
+
 % Leg Segment Positions
 plot_fscope('Leg Position',{t,t}, {q(:,1:4)*180/pi, q(:,5:8)*180/pi},...
     {{'qBack';'qBackGear';'qFront';'qFrontGear'},{'qBack';'qBackGear';'qFront';'qFrontGear'}},...
@@ -43,7 +50,7 @@ plot_fscope('Leg Position',{t,t}, {q(:,1:4)*180/pi, q(:,5:8)*180/pi},...
 plot_fscope('Leg Velocity',{t,t}, {dq(:,1:4)*180/pi, dq(:,5:8)*180/pi},...
     {{'dqBack';'dqBackGear';'dqFront';'dqFrontGear'},{'dqBack';'dqBackGear';'dqFront';'dqFrontGear'}},...
     {'Right Leg Velocity','Left Leg Velocity'},{'Time (sec)','Time (sec)'},...
-    {'Velocity (degrees / sec)','Velocity (degrees / sec)'},{[-100, 100],[-100, 100]},2,[]);
+    {'Velocity (degrees / sec)','Velocity (degrees / sec)'},{'auto','auto'},2,[]);
 % Fourbar Leg Geometry
 right_leg_length = cos((q(:,1)-q(:,3))/2);
 left_leg_length = cos((q(:,5)-q(:,7))/2);
@@ -89,7 +96,49 @@ spring_forces = zeros(size(deflections));
 for i=1:size(deflections,1)
     spring_forces(i,:) = SeaSpringForce(deflections(i,:)')';
 end
-%spring_forces = bsxfun(@times, deflections, k_sea_low');
+%%
+if exist('inc_positions_recorded','var')
+    inc_position = inc_positions_recorded(t_select,:);
+    inc_velocity = inc_velocities_recorded(t_select,:);
+    harmonic_deflections = (q(:,[2 4 6 8])-inc_position(:,1:4));
+    plot_fscope('Rotor vs Gear Position',{t,t}, {[q(:,[2 4]), inc_position(:,1:2)]*180/pi, [q(:,[6 8]), inc_position(:,3:4)]*180/pi},...
+    {{'qBackGear';'qFrontGear';'qBackInc';'qFrontInc'},{'qBackGear';'qFrontGear';'qBackInc';'qFrontInc'}},...
+    {'Right Leg','Left Leg'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Angle (degrees)'},{'auto','auto'});
+
+    rotorVel = [0,0,0,0; diff(inc_position)/sample_time];
+    rb = inc_position(:,1) + inc_velocity(:,1)/2 .* abs(inc_velocity(:,1)) / (1.7185879 * 100.0);
+    ra = inc_position(:,2) + inc_velocity(:,2)/2 .* abs(inc_velocity(:,2)) / (1.7185879 * 100.0);
+    lb = inc_position(:,3) + inc_velocity(:,3)/2 .* abs(inc_velocity(:,3)) / (1.7185879 * 100.0);
+    la = inc_position(:,4) + inc_velocity(:,4)/2 .* abs(inc_velocity(:,4)) / (1.7185879 * 100.0);
+    rd = rb - ra;
+    ld = lb - la;
+    r = [ra, rb, rd];
+    l = [la, lb, ld];
+    plot_fscope('Stopping Positions',{t,t}, {r*180/pi, l*180/pi},...
+    {{'Front';'Back';'Difference'},{'Front';'Back';'Difference'}},...
+    {'Right Leg','Left Leg'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Angle (degrees)'},{'auto','auto'});
+    cmp =         [ 0         0.4470    0.7410;
+                    0.8500    0.3250    0.0980;
+                    0.9290    0.6940    0.1250];
+    subplot(2,1,1);
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(1)*180/pi); h.Color = cmp(1,:); 
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(2)*180/pi); h.Color = cmp(2,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(3)*180/pi); h.Color = cmp(3,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(1)*180/pi); h.Color = cmp(1,:); 
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(2)*180/pi); h.Color = cmp(2,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(3)*180/pi); h.Color = cmp(3,:);
+    set(findall(gca, 'Type', 'Line'),'LineWidth',2);
+    subplot(2,1,2);
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(1)*180/pi); h.Color = cmp(1,:); 
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(2)*180/pi); h.Color = cmp(2,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(3)*180/pi); h.Color = cmp(3,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(1)*180/pi); h.Color = cmp(1,:); 
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(2)*180/pi); h.Color = cmp(2,:);
+    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(3)*180/pi); h.Color = cmp(3,:);
+    set(findall(gca, 'Type', 'Line'),'LineWidth',2);
+   
+end
+%%
 plot_fscope('SEA Torques',{t,t}, {[spring_forces(:,1:2), desired_sea_torques(:,1:2)], [spring_forces(:,3:4), desired_sea_torques(:,3:4)]}, ...
     {{'Back Measured','Front Measured','Back Cmd','Front Cmd'},{'Back Measured','Front Measured','Back Cmd','Front Cmd'}},...
     {'Right Torques','Left Torques'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {'auto','auto'}, 2);

@@ -438,7 +438,7 @@
       <Property name="Text">Software Limits</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
-      <Property name="Location">778, 515</Property>
+      <Property name="Location">989, 354</Property>
       <Property name="Name">GroupBox15</Property>
       <Property name="Size">205, 196</Property>
     </Object>
@@ -1211,6 +1211,36 @@
       <Property name="Size">603, 275</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox11" children="Controls">
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label149" children="Controls">
+        <Property name="TextAlign">MiddleLeft</Property>
+        <Property name="Text">Bad Header</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="ForeColor">Black</Property>
+        <Property name="Location">386, 83</Property>
+        <Property name="Name">Label149</Property>
+        <Property name="Size">144, 24</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label148" children="Controls">
+        <Property name="TextAlign">MiddleLeft</Property>
+        <Property name="Text">Bad CRC</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="ForeColor">Black</Property>
+        <Property name="Location">386, 59</Property>
+        <Property name="Name">Label148</Property>
+        <Property name="Size">144, 24</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label147" children="Controls">
+        <Property name="TextAlign">MiddleLeft</Property>
+        <Property name="Text">Bad Sequence Number</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Font">Segoe UI, 8pt, style=Bold</Property>
+        <Property name="ForeColor">Black</Property>
+        <Property name="Location">386, 35</Property>
+        <Property name="Name">Label147</Property>
+        <Property name="Size">144, 24</Property>
+      </Object>
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED4" children="Controls">
         <Property name="BindingSrcPath">/imu_reset_cmd</Property>
         <Property name="TargetName">TargetPC1</Property>
@@ -1219,7 +1249,7 @@
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
         <Property name="Font">Segoe UI, 9pt</Property>
-        <Property name="Location">193, 122</Property>
+        <Property name="Location">235, 122</Property>
         <Property name="Name">SwitchLED4</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay220" children="Controls">
@@ -1341,6 +1371,21 @@
         <Property name="Location">187, 13</Property>
         <Property name="Name">Label144</Property>
         <Property name="Size">77, 19</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay128" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s1</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">0</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">25, 24</Property>
+        <Property name="Font">Segoe UI, 8pt</Property>
+        <Property name="Location">529, 35</Property>
+        <Property name="Name">NumericDisplay128</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label145" children="Controls">
         <Property name="TextAlign">MiddleLeft</Property>
@@ -1476,13 +1521,43 @@
         <Property name="Name">GroupBox13</Property>
         <Property name="Size">131, 145</Property>
       </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay121" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s2</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">0</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">24, 24</Property>
+        <Property name="Font">Segoe UI, 8pt</Property>
+        <Property name="Location">530, 60</Property>
+        <Property name="Name">NumericDisplay121</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay114" children="Controls">
+        <Property name="BindingSrcType">Signal</Property>
+        <Property name="OutputValue">0</Property>
+        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s3</Property>
+        <Property name="BindingSrcObject" />
+        <Property name="TargetName">TargetPC1</Property>
+        <Property name="TextFormatting">
+          <Property name="Precision">0</Property>
+          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
+        </Property>
+        <Property name="Size">24, 24</Property>
+        <Property name="Font">Segoe UI, 8pt</Property>
+        <Property name="Location">530, 86</Property>
+        <Property name="Name">NumericDisplay114</Property>
+      </Object>
       <Property name="Text">IMU</Property>
       <Property name="UseCompatibleTextRendering">True</Property>
       <Property name="BackColor">Control</Property>
       <Property name="Font">Segoe UI, 10pt, style=Bold</Property>
       <Property name="Location">413, 534</Property>
       <Property name="Name">GroupBox11</Property>
-      <Property name="Size">359, 177</Property>
+      <Property name="Size">570, 177</Property>
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GroupBox9" children="Controls">
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay140" children="Controls">
@@ -1495,7 +1570,7 @@
           <Property name="Precision">0</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 271</Property>
         <Property name="Name">NumericDisplay140</Property>
@@ -1510,136 +1585,136 @@
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 271</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 271</Property>
         <Property name="Name">GaugeFluidLevel9</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay141" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/cont_tau_cmd/s5</Property>
+        <Property name="BindingSrcPath">atrias_system/velocity_cmd/s4</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
+          <Property name="Precision">2</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 221</Property>
         <Property name="Name">NumericDisplay141</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel10" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/abs_cont_tau_cmd/s5</Property>
+        <Property name="BindingSrcPath">atrias_system/abs_velocity_cmd/s4</Property>
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="ScaleRange">
-          <Property name="Span">350</Property>
+          <Property name="Span">8</Property>
         </Property>
         <Property name="ScaleDisplay">
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 221</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 221</Property>
         <Property name="Name">GaugeFluidLevel10</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay138" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/cont_tau_cmd/s2</Property>
+        <Property name="BindingSrcPath">atrias_system/velocity_cmd/s2</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
+          <Property name="Precision">2</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 71</Property>
         <Property name="Name">NumericDisplay138</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel7" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/abs_cont_tau_cmd/s2</Property>
+        <Property name="BindingSrcPath">atrias_system/abs_velocity_cmd/s2</Property>
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="ScaleRange">
-          <Property name="Span">350</Property>
+          <Property name="Span">8</Property>
         </Property>
         <Property name="ScaleDisplay">
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 71</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 71</Property>
         <Property name="Name">GaugeFluidLevel7</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay139" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/cont_tau_cmd/s4</Property>
+        <Property name="BindingSrcPath">atrias_system/velocity_cmd/s3</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
+          <Property name="Precision">2</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 171</Property>
         <Property name="Name">NumericDisplay139</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel8" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/abs_cont_tau_cmd/s4</Property>
+        <Property name="BindingSrcPath">atrias_system/abs_velocity_cmd/s3</Property>
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="ScaleRange">
-          <Property name="Span">350</Property>
+          <Property name="Span">8</Property>
         </Property>
         <Property name="ScaleDisplay">
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 171</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 171</Property>
         <Property name="Name">GaugeFluidLevel8</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay137" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/cont_tau_cmd/s1</Property>
+        <Property name="BindingSrcPath">atrias_system/velocity_cmd/s1</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
+          <Property name="Precision">2</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 21</Property>
         <Property name="Name">NumericDisplay137</Property>
       </Object>
       <Object type="MW.Instruments.GaugeFluidLevel, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GaugeFluidLevel6" children="Controls">
         <Property name="BindingSrcObject" />
-        <Property name="BindingSrcPath">atrias_system/abs_cont_tau_cmd/s1</Property>
+        <Property name="BindingSrcPath">atrias_system/abs_velocity_cmd/s1</Property>
         <Property name="OutputValue">0</Property>
         <Property name="BindingSrcType">Signal</Property>
         <Property name="TargetName">TargetPC1</Property>
         <Property name="ScaleRange">
-          <Property name="Span">350</Property>
+          <Property name="Span">8</Property>
         </Property>
         <Property name="ScaleDisplay">
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 21</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 21</Property>
         <Property name="Name">GaugeFluidLevel6</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay136" children="Controls">
@@ -1652,7 +1727,7 @@
           <Property name="Precision">0</Property>
           <Property name="PrecisionStyle">FixedDecimalPoints</Property>
         </Property>
-        <Property name="Size">72, 50</Property>
+        <Property name="Size">99, 50</Property>
         <Property name="Font">Segoe UI, 23pt</Property>
         <Property name="Location">87, 121</Property>
         <Property name="Name">NumericDisplay136</Property>
@@ -1667,8 +1742,8 @@
           <Property name="Visible">False</Property>
         </Property>
         <Property name="Rotation">X090</Property>
-        <Property name="Size">235, 50</Property>
-        <Property name="Location">159, 121</Property>
+        <Property name="Size">202, 50</Property>
+        <Property name="Location">192, 121</Property>
         <Property name="Name">GaugeFluidLevel5</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label80" children="Controls">
@@ -2344,21 +2419,6 @@
         <Property name="Location">91, 123</Property>
         <Property name="Name">NumericDisplay113</Property>
       </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay114" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s3</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">24, 24</Property>
-        <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">331, 99</Property>
-        <Property name="Name">NumericDisplay114</Property>
-      </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay115" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
@@ -2449,21 +2509,6 @@
         <Property name="Location">91, 99</Property>
         <Property name="Name">NumericDisplay120</Property>
       </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay121" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s2</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">24, 24</Property>
-        <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">331, 75</Property>
-        <Property name="Name">NumericDisplay121</Property>
-      </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay122" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
@@ -2553,21 +2598,6 @@
         <Property name="Font">Segoe UI, 8pt</Property>
         <Property name="Location">91, 75</Property>
         <Property name="Name">NumericDisplay127</Property>
-      </Object>
-      <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay128" children="Controls">
-        <Property name="BindingSrcType">Signal</Property>
-        <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">atrias_system/Demux Diags/p12/s1</Property>
-        <Property name="BindingSrcObject" />
-        <Property name="TargetName">TargetPC1</Property>
-        <Property name="TextFormatting">
-          <Property name="Precision">0</Property>
-          <Property name="PrecisionStyle">FixedDecimalPoints</Property>
-        </Property>
-        <Property name="Size">24, 24</Property>
-        <Property name="Font">Segoe UI, 8pt</Property>
-        <Property name="Location">331, 51</Property>
-        <Property name="Name">NumericDisplay128</Property>
       </Object>
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay129" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
