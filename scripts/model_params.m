@@ -54,7 +54,7 @@ g_reduced = (m_total_real-m_counter_weight)/m_total_real*g; % effective gravity 
 %% Torso
 m_torso = m_total_real - 2*(m_leg_motor+m_leg);
 m_body = m_total_real - 2*m_leg;
-com_torso = [0.01, 0, 0.2885]; % m, Coordinates from pelvis.
+com_torso = [0, 0, 0.50];%[0.01, 0, 0.2885]; % m, Coordinates from pelvis.
 %if robot_is_attached_to_boom, com_torso(2) = -0.1; end
 i_torso = [1.5, 2.2, 1.5];
 torso_centerline_roll_offset_angle = atan2(-com_torso(2), com_torso(3));
