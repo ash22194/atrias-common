@@ -42,7 +42,7 @@ d_ankle_to_foot = 0.0245; % m
 l_seg_lower = 0.09 + d_ankle_to_foot; % m
 
 %% Full Robot
-m_total_real = 62.591; % kg (measured on force plate with boom attached)
+m_total_real = 62.591; % kg
 if robot_is_attached_to_boom, m_total_real = m_total_real + m_boom/2; end
 d_vertical_mount_to_hip = 0.3176; % m
 
