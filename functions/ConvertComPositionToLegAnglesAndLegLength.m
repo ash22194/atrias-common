@@ -89,7 +89,7 @@ function [Alpha, Beta, LegLength]  =  ...
         ddfR2p_b = ddfR2c_b - ddp2c_b; % target accel
         [alpha_star_R, beta_star_R, l_star_R] = right_leg_IK(-fR2p_b, lateral_offset); %IK wants foot relative to pelvis
         % Velocity computation using desired positions instead of measured
-        [dalpha_star_R, dbeta_star_R, dl_star_R] = velocity_map_R(alpha_star_R, beta_star_R, l_star_R, ... %use current robot state
+        [dalpha_star_R, dbeta_star_R, dl_star_R] = velocity_map_R(alpha_star_R, beta_star_R, l_star_R, ... %use target robot state
                                dfR2p_b(1), dfR2p_b(2), dfR2p_b(3), lateral_offset); % derived jacobian uses velocity of pelvis w.r.t foot.
         %[dalpha_star_R, dbeta_star_R, dl_star_R] = velocity_map_R(alpha, beta, l_leg, ... %use current robot state
         %                       dfR2p_b(1), dfR2p_b(2), dfR2p_b(3), lateral_offset); % derived jacobian uses velocity of pelvis w.r.t foot.
