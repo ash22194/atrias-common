@@ -48,3 +48,14 @@ karnopp_model_static_friction = [50 40 35 35]';
 karnopp_model_integration_constant = 1/sample_time;
 karnopp_model_recursive_filter_sample_number = 0.050 / sample_time;
 
+%-- Low pass filter for IMU measurements
+fcut_imu = 250*(2*pi);
+lpf_damping = sqrt(2)/2;
+B1_lpf_imu = -2*exp(-lpf_damping*fcut_imu*sample_time)*cos(fcut_imu*sample_time*sqrt(1-lpf_damping^2));
+B2_lpf_imu = exp(-2*lpf_damping*fcut_imu*sample_time);
+A_lpf_imu = 1 + B1_lpf_imu + B2_lpf_imu;
+fcut_accelerometer = 80*(2*pi);
+lpf_damping = sqrt(2)/2;
+B1_lpf_accelerometer = -2*exp(-lpf_damping*fcut_accelerometer*sample_time)*cos(fcut_accelerometer*sample_time*sqrt(1-lpf_damping^2));
+B2_lpf_accelerometer = exp(-2*lpf_damping*fcut_accelerometer*sample_time);
+A_lpf_accelerometer = 1 + B1_lpf_accelerometer + B2_lpf_accelerometer;
