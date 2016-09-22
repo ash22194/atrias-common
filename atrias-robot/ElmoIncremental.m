@@ -16,7 +16,7 @@ classdef ElmoIncremental < Encoder
 		unitsPerTick = 0
 
 		% Sample time
-		sample_time = 0.001
+		sample_time = 0.0005
 	end
 
 	methods (Access = protected)

@@ -19,6 +19,7 @@ imu_heading = deg2rad(90);
 
 % Update rates
 sample_time = 0.001; % seconds
+elmo_sample_time = 0.0005;
 update_freq = 1/sample_time; % Hz
 correctedSampleTime = 0.0009982; % Seconds
 
@@ -76,8 +77,8 @@ MTR_MAX_TEMP = 118; % Maximum motor temperature, degrees Celsius
 
 % From biped1_variant_defs.h
 % Note: Left and right are swapped for CMU
-RIGHT_HIP_CALIB_VAL = 4327;   %Calibration encoder value in ticks (OSU convention)
-LEFT_HIP_CALIB_VAL = 1227;  %Calibration encoder value in ticks (OSU convention)
+RIGHT_HIP_CALIB_VAL = 4313;   %Calibration encoder value in ticks (OSU convention)
+LEFT_HIP_CALIB_VAL = 1223;  %Calibration encoder value in ticks (OSU convention)
 RIGHT_HIP_CALIB_POS = 0.1066;  %Calibration angle in radians
 LEFT_HIP_CALIB_POS = 0.0422; %Calibration angle in radians
 MTR_MAX_CONT_CURRENT = 100.0; %Maximum continuous amplifier current (RMS Amps)
@@ -95,10 +96,10 @@ HIP_CURRENT_LIMIT = MTR_HIP_MAX_CURRENT; % Maximum motor current for testing
 % Right Leg (A/B flipped) (TRAN == motor)
 % A = Back
 % B = Front
-LEG1_LEG_A_CALIB_VAL  = 263580387; %Calibration encoder value in ticks
-LEG1_TRAN_A_CALIB_VAL = 197883711; %Calibration encoder value in ticks
-LEG1_LEG_B_CALIB_VAL  = 263621202; %Calibration encoder value in ticks
-LEG1_TRAN_B_CALIB_VAL = 198684551; %Calibration encoder value in ticks
+LEG1_LEG_A_CALIB_VAL  = 263407929; %Calibration encoder value in ticks
+LEG1_TRAN_A_CALIB_VAL = 197894726; %Calibration encoder value in ticks
+LEG1_LEG_B_CALIB_VAL  = 264096192; %Calibration encoder value in ticks
+LEG1_TRAN_B_CALIB_VAL = 198882273; %Calibration encoder value in ticks
 
 LEG1_LEG_A_RAD_PER_CNT  = -9.8039216e-09; %Ticks to rad constant
 LEG1_TRAN_A_RAD_PER_CNT = -9.8039216e-09; %Ticks to rad constant
@@ -111,10 +112,10 @@ LEG1_MOTOR_B_DIRECTION = 1.0;
 % Left Leg (A/B flipped) (TRAN == motor)
 % A = Back
 % B = Front
-LEG2_LEG_A_CALIB_VAL  = 173247901; % %Calibration encoder value in ticks
-LEG2_TRAN_A_CALIB_VAL = 198140746; % %Calibration encoder value in ticks
-LEG2_LEG_B_CALIB_VAL  = 264773359; % %Calibration encoder value in ticks
-LEG2_TRAN_B_CALIB_VAL = 141741949; % %Calibration encoder value in ticks
+LEG2_LEG_A_CALIB_VAL  = 173556068; % %Calibration encoder value in ticks
+LEG2_TRAN_A_CALIB_VAL = 198004386; % %Calibration encoder value in ticks
+LEG2_LEG_B_CALIB_VAL  = 264732325; % %Calibration encoder value in ticks
+LEG2_TRAN_B_CALIB_VAL = 141893574; % %Calibration encoder value in ticks
 
 LEG2_LEG_A_RAD_PER_CNT  =  9.8039216e-09; %Ticks to rad constant
 LEG2_TRAN_A_RAD_PER_CNT = -9.8039216e-09; %Ticks to rad constant
@@ -127,9 +128,9 @@ LEG2_MOTOR_B_DIRECTION = 1.0;
 % Soft limits for motor positions
 HARD_MOTOR_POSITION_LIMITS_UPPER = [3.60; 4.78; 2.47]; % A B retraction
 HARD_MOTOR_POSITION_LIMITS_LOWER = [1.51; 2.68; 0.50]; % A B extension
-limExt = 0.1;%0.05;
+limExt = 0.1;
 MOTOR_POSITION_LIMITS_UPPER = [HARD_MOTOR_POSITION_LIMITS_UPPER(1:2)-limExt; HARD_MOTOR_POSITION_LIMITS_UPPER(3)-0.3];
-MOTOR_POSITION_LIMITS_LOWER = [HARD_MOTOR_POSITION_LIMITS_LOWER(1:2)+limExt; HARD_MOTOR_POSITION_LIMITS_LOWER(3)+0.1];%+0.05];
+MOTOR_POSITION_LIMITS_LOWER = [HARD_MOTOR_POSITION_LIMITS_LOWER(1:2)+limExt; HARD_MOTOR_POSITION_LIMITS_LOWER(3)+0.15];
 
 % params for DAQ functions
 max_motor_velocity = 7.88; % rad/s

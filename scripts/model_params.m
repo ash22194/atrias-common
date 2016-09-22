@@ -42,6 +42,7 @@ d_ankle_to_foot = 0.0245; % m
 l_seg_lower = 0.09 + d_ankle_to_foot; % m
 
 %% Full Robot
+robot_is_attached_to_boom = true;
 m_total_real = 62.591; % kg
 if robot_is_attached_to_boom, m_total_real = m_total_real + m_boom/2; end
 d_vertical_mount_to_hip = 0.3176; % m
@@ -54,8 +55,7 @@ g_reduced = (m_total_real-m_counter_weight)/m_total_real*g; % effective gravity 
 %% Torso
 m_torso = m_total_real - 2*(m_leg_motor+m_leg);
 m_body = m_total_real - 2*m_leg;
-com_torso = [0, 0, 0.50];%[0.01, 0, 0.2885]; % m, Coordinates from pelvis.
-%if robot_is_attached_to_boom, com_torso(2) = -0.1; end
+com_torso = [0, 0, 0.50]; % m, Coordinates from pelvis.
 i_torso = [1.5, 2.2, 1.5];
 torso_centerline_roll_offset_angle = atan2(-com_torso(2), com_torso(3));
 torso_centerline_pitch_offset_angle = atan2(com_torso(1), com_torso(3)); % IMU is 1.1115 degrees higher than boom

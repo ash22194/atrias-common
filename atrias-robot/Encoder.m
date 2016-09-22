@@ -29,16 +29,16 @@
 classdef Encoder < matlab.System
 	properties
 		% Initial position output
-		initPosOut@double = 0
+		initPosOut = double(0)
 
 		% Initial velocity output
-		initVelOut@double = 0
+		initVelOut = double(0)
 
 		% Check for non-finite pos or vel
-		checkInf@logical = false
+		checkInf = logical(false)
 
 		% Calibrate only once
-		calibOnce@logical = true
+		calibOnce = logical(true)
 	end
 
 	properties (Access = protected)
@@ -46,7 +46,7 @@ classdef Encoder < matlab.System
 		calibrated = false
 
 		% Current "state" -- most recent known valid values
-		curState@EncoderState
+		curState = EncoderState
 
 		% Calibration location
 		calibLoc = 0
@@ -55,10 +55,10 @@ classdef Encoder < matlab.System
 		dt = 0
 
 		% Output position units per tick (for linear encoders)
-		posUnitsPerTick@double = 0
+		posUnitsPerTick = double(0)
 
 		% Unwrapping modulus (0 for no unwrap)
-		encUnwrapMod@int64 = int64(0)
+		encUnwrapMod = int64(0)
 
 		% Data filter properties. These are set at each iteration by
 		% stepImpl. These are properties, rather than passed in,
@@ -147,7 +147,7 @@ classdef Encoder < matlab.System
 			calibState.pos      = this.decodePos(calibState.posTicks, calibVal);
 
 			% Calibrate if the new state is trustworthy
-			if ~this.trustData(calibState);
+			if ~this.trustData(calibState)
 				return
 			end
 
