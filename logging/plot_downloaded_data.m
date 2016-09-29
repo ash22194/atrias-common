@@ -1,4 +1,4 @@
-%% Plot data in workspace
+%% Plot data from workspace
 t = time_recorded;
 t_start = 10;
 t_end =  time_recorded(end);
@@ -6,30 +6,16 @@ t_select = t>=t_start & t<=t_end;
 q = q_recorded(t_select,:);
 dq = dq_recorded(t_select,:);
 tau = tau_recorded(t_select,:);
-t = time_recorded(t_select);%*correctedSampleTime/sample_time;
-if exist('qinc_recorded','var') && size(qinc_recorded,1) == length(time_recorded)
-    qinc = qinc_recorded(t_select,:);
-    dqinc = dqinc_recorded(t_select,:);
-end
-if exist('velocity_command_recorded','var') && length(velocity_command_recorded) == length(time_recorded)
-    velocity_command = velocity_command_recorded(t_select,:);
-    velocity_mode = velocity_mode_recorded(t_select,:);
-    velocity_command = velocity_command.*velocity_mode;
-end
-if exist('elmo_velocity_recorded','var') && length(elmo_velocity_recorded) == length(time_recorded)
-    elmo_velocity = elmo_velocity_recorded(t_select,:);
-end
-if exist('elmo_torque_recorded','var') && length(elmo_torque_recorded) == length(time_recorded)
-    elmo_torque = elmo_torque_recorded(t_select,:);
-end
-if exist('desired_sea_torques_recorded','var') && length(desired_sea_torques_recorded) == length(time_recorded)
-    desired_sea_torques = desired_sea_torques_recorded(t_select,:);
-    desired_sea_torques = bsxfun(@times, desired_sea_torques, velocity_mode);
-end
-if exist('elmo_torque_demands_recorded','var') && length(elmo_torque_demands_recorded) == length(time_recorded)
-    elmo_torque_demands = elmo_torque_demands_recorded(t_select,:);
-end
-
+t = time_recorded(t_select);
+qinc = incremental_recorded(t_select,:);
+dqinc = elmo_measured_velocities_recorded(t_select,:);
+velocity_command = sagittal_velocity_commands_recorded(t_select,:);
+elmo_velocity = elmo_measured_velocities_recorded(t_select,:);
+elmo_torque = elmo_measured_torques_recorded(t_select,:);
+desired_sea_torques = desired_sea_torques_recorded(t_select,:);
+elmo_torque_demands = elmo_demanded_torques_recorded(t_select,:);
+elmo_velocity_demands = elmo_demanded_velocities_recorded(t_select,:);
+     
 % When motors were enabled
 motors_enabled = motors_enabled_recorded(t_select,:);
 motors_on = [0; diff(motors_enabled)] == 1;
@@ -67,15 +53,9 @@ plot_fscope('Virtual Leg Angle',{t,t}, {right_leg_angle*180/pi, left_leg_angle*1
     {'Right Leg Angle','Left Leg Angle'},{'Time (sec)','Time (sec)'},...
     {'Angle (degrees)','Angle (degrees)'},{[90, 270],[90, 270]},2,[]);
 % Lateral Positions)
-if exist('qinc_recorded','var') && size(qinc_recorded,1) == length(time_recorded)
-    plot_fscope('Lateral Position',{t}, {[(qinc(:,5:6))*180/pi, (q(:,9:10))*180/pi]},...
-    {{'Right Inc';'Left Inc';'Right Abs';'Left Abs'}},...
-    {'Lateral Angles'},{'Time (sec)'},{'Angle (degrees)'},{'auto'},1,[]);
-else
-    plot_fscope('Lateral Position',{t,t}, {[(q(:,9:10))*180/pi], [dq(:,9:10)*180/pi]},...
-    {{'Right Inc Position';'Left Inc Position'},{'Right Inc Velocity','Left Inc Velocity'}},...
-    {'Lateral Angles','Lateral Velocities'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Velocity (degrees/s)'},{'auto','auto'},2);
-end
+plot_fscope('Lateral Position',{t,t}, {[(q(:,9:10))*180/pi], [dq(:,9:10)*180/pi]},...
+{{'Right Inc Position';'Left Inc Position'},{'Right Inc Velocity','Left Inc Velocity'}},...
+{'Lateral Angles','Lateral Velocities'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Velocity (degrees/s)'},{'auto','auto'},2);
 
 % IMU data
 torso_pitch = q(:,13);
@@ -83,57 +63,12 @@ torso_roll = q(:,11);
 right_leg_roll = pi/2 - q(:,5);
 left_leg_roll = pi/2 - q(:,6);
 
-% Torque data
-% spring deflections
+% SEA deflections
 deflections = [ q(:,2)-q(:,1), q(:,4)-q(:,3), q(:,6)-q(:,5), q(:,8)-q(:,7)];
-% torques desired vs measured
 spring_forces = zeros(size(deflections));
 for i=1:size(deflections,1)
     spring_forces(i,:) = SeaSpringForce(deflections(i,:)')';
 end
-%%
-if exist('inc_positions_recorded','var')
-    inc_position = inc_positions_recorded(t_select,:);
-    inc_velocity = inc_velocities_recorded(t_select,:);
-    harmonic_deflections = (q(:,[2 4 6 8])-inc_position(:,1:4));
-    plot_fscope('Rotor vs Gear Position',{t,t}, {[q(:,[2 4]), inc_position(:,1:2)]*180/pi, [q(:,[6 8]), inc_position(:,3:4)]*180/pi},...
-    {{'qBackGear';'qFrontGear';'qBackInc';'qFrontInc'},{'qBackGear';'qFrontGear';'qBackInc';'qFrontInc'}},...
-    {'Right Leg','Left Leg'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Angle (degrees)'},{'auto','auto'});
-
-    rotorVel = [0,0,0,0; diff(inc_position)/sample_time];
-    rb = inc_position(:,1) + inc_velocity(:,1)/2 .* abs(inc_velocity(:,1)) / (1.7185879 * 100.0);
-    ra = inc_position(:,2) + inc_velocity(:,2)/2 .* abs(inc_velocity(:,2)) / (1.7185879 * 100.0);
-    lb = inc_position(:,3) + inc_velocity(:,3)/2 .* abs(inc_velocity(:,3)) / (1.7185879 * 100.0);
-    la = inc_position(:,4) + inc_velocity(:,4)/2 .* abs(inc_velocity(:,4)) / (1.7185879 * 100.0);
-    rd = rb - ra;
-    ld = lb - la;
-    r = [ra, rb, rd];
-    l = [la, lb, ld];
-    plot_fscope('Stopping Positions',{t,t}, {r*180/pi, l*180/pi},...
-    {{'Front';'Back';'Difference'},{'Front';'Back';'Difference'}},...
-    {'Right Leg','Left Leg'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Angle (degrees)'},{'auto','auto'});
-    cmp =         [ 0         0.4470    0.7410;
-                    0.8500    0.3250    0.0980;
-                    0.9290    0.6940    0.1250];
-    subplot(2,1,1);
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(1)*180/pi); h.Color = cmp(1,:); 
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(2)*180/pi); h.Color = cmp(2,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(3)*180/pi); h.Color = cmp(3,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(1)*180/pi); h.Color = cmp(1,:); 
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(2)*180/pi); h.Color = cmp(2,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(3)*180/pi); h.Color = cmp(3,:);
-    set(findall(gca, 'Type', 'Line'),'LineWidth',2);
-    subplot(2,1,2);
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(1)*180/pi); h.Color = cmp(1,:); 
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(2)*180/pi); h.Color = cmp(2,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_UPPER(3)*180/pi); h.Color = cmp(3,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(1)*180/pi); h.Color = cmp(1,:); 
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(2)*180/pi); h.Color = cmp(2,:);
-    h = refline(0,MOTOR_POSITION_LIMITS_LOWER(3)*180/pi); h.Color = cmp(3,:);
-    set(findall(gca, 'Type', 'Line'),'LineWidth',2);
-   
-end
-%%
 plot_fscope('SEA Torques',{t,t}, {[spring_forces(:,1:2), desired_sea_torques(:,1:2)], [spring_forces(:,3:4), desired_sea_torques(:,3:4)]}, ...
     {{'Back Measured','Front Measured','Back Cmd','Front Cmd'},{'Back Measured','Front Measured','Back Cmd','Front Cmd'}},...
     {'Right Torques','Left Torques'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {'auto','auto'}, 2);
@@ -155,41 +90,15 @@ plot_fscope('Leg Torques',{t,t}, {[right_leg_torque_measured], [left_leg_torque_
     {{'Measured'},{'Measured'}},...
     {'Right Leg Torque','Left Leg Torque'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {[-700,700],[-700,700]}, 2);
 
-
 % Velocity commands
-if exist('velocity_command_recorded','var') && length(velocity_command_recorded) == length(time_recorded)
-
-    if exist('elmo_velocity_recorded','var') && length(elmo_velocity_recorded) == length(time_recorded)
-        if exist('elmo_torque_demands_recorded','var') && length(elmo_torque_demands_recorded) == length(time_recorded)
-            elmo_velocity_demands = elmo_velocity_demands_recorded(t_select,:);  
-            plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), elmo_velocity_demands(:,1:2), elmo_velocity(:,1:2)], [velocity_command(:,3:4), elmo_velocity_demands(:,3:4), elmo_velocity(:,3:4)]}, ...
-                {{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'},{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'}},...
-                {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
-        else
-            plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), elmo_velocity(:,1:2)], [velocity_command(:,3:4), elmo_velocity(:,3:4)]}, ...
-                {{'Back Commanded','Front Commanded','Back Measured','Front Measured'},{'Back Commanded','Front Commanded','Back Measured','Front Measured'}},...
-                {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
-        end
-        plot_fscope('Motor Velocity',{t,t}, {[dq(:,[2 4]), elmo_velocity(:,1:2)], [dq(:,[6 8]), elmo_velocity(:,3:4)]}, ...
-            {{'Back Abs','Front Abs','Back Inc','Front Inc'},{'Back Abs','Front Abs','Back Inc','Front Inc'}},...
-            {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
-    else
-         plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), dq(:,[2 4])], [velocity_command(:,3:4), dq(:,[6 8])]}, ...
-                {{'Back Commanded','Front Commanded','Back Measured','Front Measured'},{'Back Commanded','Front Commanded','Back Measured','Front Measured'}},...
-                {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
-    end
-
-end
+plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), elmo_velocity_demands(:,1:2), elmo_velocity(:,1:2)], [velocity_command(:,3:4), elmo_velocity_demands(:,3:4), elmo_velocity(:,3:4)]}, ...
+    {{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'},{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'}},...
+    {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
+plot_fscope('Motor Velocity',{t,t}, {[dq(:,[2 4]), elmo_velocity(:,1:2)], [dq(:,[6 8]), elmo_velocity(:,3:4)]}, ...
+    {{'Back Abs','Front Abs','Back Inc','Front Inc'},{'Back Abs','Front Abs','Back Inc','Front Inc'}},...
+    {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
 
 % Torque commands
-commanded_torques = tau(:,[1 2 4 5]);
-if exist('elmo_torque_recorded','var') && length(elmo_torque_recorded) == length(time_recorded)
-         elmo_torque_commands = commanded_torques;
-         plot_fscope('Motor Torque',{t,t}, {[elmo_torque(:,1:2), elmo_torque_commands(:,1:2), elmo_torque_demands(:,1:2)], [elmo_torque(:,3:4), elmo_torque_commands(:,3:4), elmo_torque_demands(:,3:4)]}, ...
-            {{'Back Measured','Front Measured', 'Back Cmd','Front Cmd', 'Back Dmd','Front Dmd'},{'Back Measured','Front Measured', 'Back Cmd','Front Cmd', 'Back Dmd','Front Dmd'}},...
-            {'Right Motor Torques','Left Motor Torques'}, {'Time (sec)','Time (sec)'}, {'N','N'}, {'auto','auto'}, 2);           
-else
-    plot_fscope('Motor Torques',{t,t}, {tau(:,1:2),tau(:,4:5)}, ...
-        {{'Back Commanded','Front Commanded'},{'Back Commanded','Front Commanded'}},...
-        {'Right Leg Torques','Left Leg Torques'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {'auto','auto'}, 2);
-end
+plot_fscope('Motor Torque',{t,t}, {[elmo_torque(:,1:2), elmo_torque_demands(:,1:2)], [elmo_torque(:,3:4), elmo_torque_demands(:,3:4)]}, ...
+    {{'Back Measured','Front Measured', 'Back Dmd','Front Dmd'},{'Back Measured','Front Measured', 'Back Dmd','Front Dmd'}},...
+    {'Right Motor Torques','Left Motor Torques'}, {'Time (sec)','Time (sec)'}, {'N','N'}, {'auto','auto'}, 2);           

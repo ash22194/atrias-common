@@ -17,7 +17,6 @@ r_hip_shaft = 0.542925;
 N_hip = r_hip_shaft / r_hip_gearhead;
 
 %% Series Elastic Actuators
-% (old values: 4118.3, [4255.0 4525.3 4372.1 4322.4])
 % [Nm/rad] (RB RF LB LF)
 k_sea_low = [3343; 3825; 3476; 3905]; 
 k_sea_high = [4255.0; 4255.0; 4372.1; 4322.4];
@@ -29,10 +28,8 @@ com_leg_motor = [0, lateral_offset-0.0149, 0.029]; % m, Coordinates from pelvis 
 i_leg_motor = [0.29, 0.27,  0.10];
 j_rotor = 1.5e-3;
 j_motor = j_rotor*LEG_MTR_GEAR_RATIO^2;
-j_leg = 2*0.147;
-j_segments = [0.145 0.155 0.145 0.155];
-% Effective inertia = k_leg_spring / (2*pi*f_nat)^2 / gear_ratio^2 [f_nat = natural frequency obtained from vibration of SEA springs]
-%sagittal_motor_efficiency = 0.85;
+j_segments = [0.154, 0.313, 0.160, 0.320]; % estimated from hammer hits
+j_leg = mean(j_segments([1, 3])) + mean(j_segments([2, 4]));
 
 %% Legs
 m_leg = 2.3438; % kg

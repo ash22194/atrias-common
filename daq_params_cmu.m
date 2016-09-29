@@ -18,10 +18,10 @@ imu_latitude = 40.442493 * pi/180; % CMU latitude
 imu_heading = deg2rad(90);
 
 % Update rates
-sample_time = 0.001; % seconds
-elmo_sample_time = 0.0005;
+sample_time = 0.001; % s, sample time of high level control and medullas
+elmo_sample_time = 0.00025; % s, sample time that elmos send/receive at
 update_freq = 1/sample_time; % Hz
-correctedSampleTime = 0.0009982; % Seconds
+correctedSampleTime = 0.0009982; % s, only for MATLAB < 2016b
 
 % This is the CMU robot
 isOsuRobot = false;
