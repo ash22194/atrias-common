@@ -10,7 +10,7 @@ addpath(genpath([currentFolder '/functions/']));
 addpath([currentFolder '/scripts/']);
 
 % Set build directory
-if ~exist('build','dir'), mkdir('build'); end
+if ~exist([currentFolder, '/build/'],'dir'), mkdir('build'); end
 set_param(0, 'CacheFolder', [currentFolder '/build']);
 set_param(0, 'CodeGenFolder', [currentFolder '/build']);
 

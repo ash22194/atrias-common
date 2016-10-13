@@ -1,11 +1,11 @@
-%% Plot data from workspace
+%% Load data into workspace
 t = time_recorded;
 t_start = 10;
 t_end =  time_recorded(end);
 t_select = t>=t_start & t<=t_end;
 q = q_recorded(t_select,:);
 dq = dq_recorded(t_select,:);
-tau = tau_recorded(t_select,:);
+tau_lateral = lateral_torque_commands_recorded(t_select,:);
 t = time_recorded(t_select);
 qinc = incremental_recorded(t_select,:);
 dqinc = elmo_measured_velocities_recorded(t_select,:);
@@ -15,14 +15,13 @@ elmo_torque = elmo_measured_torques_recorded(t_select,:);
 desired_sea_torques = desired_sea_torques_recorded(t_select,:);
 elmo_torque_demands = elmo_demanded_torques_recorded(t_select,:);
 elmo_velocity_demands = elmo_demanded_velocities_recorded(t_select,:);
-     
-% When motors were enabled
 motors_enabled = motors_enabled_recorded(t_select,:);
 motors_on = [0; diff(motors_enabled)] == 1;
 motors_off = [diff(motors_enabled); 0] == -1;
 fprintf('Motors enabled at t=%f s\n',t(motors_on));
 fprintf('Motors disabled at t=%f s\n',t(motors_off));
 
+%% Start plotting
 % Leg Segment Positions
 plot_fscope('Leg Position',{t,t}, {q(:,1:4)*180/pi, q(:,5:8)*180/pi},...
     {{'qBackLoad';'qBackGear';'qFrontLoad';'qFrontGear'},{'qBackLoad';'qBackGear';'qFrontLoad';'qFrontGear'}},...
@@ -73,7 +72,7 @@ plot_fscope('SEA Torques',{t,t}, {[spring_forces(:,1:2), desired_sea_torques(:,1
     {{'Back Measured','Front Measured','Back Cmd','Front Cmd'},{'Back Measured','Front Measured','Back Cmd','Front Cmd'}},...
     {'Right Torques','Left Torques'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {'auto','auto'}, 2);
 % commanded lateral motor torques
-lateral_torque_commands = [tau(:,3) tau(:,6)];
+lateral_torque_commands = [tau_lateral(:,1) tau_lateral(:,2)];
 plot_fscope('Lateral Torques',{t}, {lateral_torque_commands}, ...
     {{'Right Commanded','Left Commanded'}},...
     {'Lateral Torques'}, {'Time (sec)'}, {'Torque (Nm)'}, {[-700 250]}, 1, []);

@@ -76,9 +76,8 @@ BOOM_MAX_ENCODER_TICKS = 2^17 - 1; % Max value of the absolute boom encoders (17
 MTR_MAX_TEMP = 118; % Maximum motor temperature, degrees Celsius
 
 % From biped1_variant_defs.h
-% Note: Left and right are swapped for CMU
-RIGHT_HIP_CALIB_VAL = 4313;   %Calibration encoder value in ticks (OSU convention)
-LEFT_HIP_CALIB_VAL = 1223;  %Calibration encoder value in ticks (OSU convention)
+RIGHT_HIP_CALIB_VAL = 5437;   %Calibration encoder value in ticks
+LEFT_HIP_CALIB_VAL = 116;  %Calibration encoder value in ticks
 RIGHT_HIP_CALIB_POS = 0.1066;  %Calibration angle in radians
 LEFT_HIP_CALIB_POS = 0.0422; %Calibration angle in radians
 MTR_MAX_CONT_CURRENT = 100.0; %Maximum continuous amplifier current (RMS Amps)
@@ -96,10 +95,10 @@ HIP_CURRENT_LIMIT = MTR_HIP_MAX_CURRENT; % Maximum motor current for testing
 % Right Leg (A/B flipped) (TRAN == motor)
 % A = Back
 % B = Front
-LEG1_LEG_A_CALIB_VAL  = 263407929; %Calibration encoder value in ticks
-LEG1_TRAN_A_CALIB_VAL = 197894726; %Calibration encoder value in ticks
-LEG1_LEG_B_CALIB_VAL  = 264096192; %Calibration encoder value in ticks
-LEG1_TRAN_B_CALIB_VAL = 198882273; %Calibration encoder value in ticks
+LEG1_LEG_A_CALIB_VAL  = 263263188; %Calibration encoder value in ticks
+LEG1_TRAN_A_CALIB_VAL = 197839355; %Calibration encoder value in ticks
+LEG1_LEG_B_CALIB_VAL  = 263516867; %Calibration encoder value in ticks
+LEG1_TRAN_B_CALIB_VAL = 198925615; %Calibration encoder value in ticks
 
 LEG1_LEG_A_RAD_PER_CNT  = -9.8039216e-09; %Ticks to rad constant
 LEG1_TRAN_A_RAD_PER_CNT = -9.8039216e-09; %Ticks to rad constant
