@@ -1244,7 +1244,7 @@
       <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED4" children="Controls">
         <Property name="BindingSrcPath">/imu_reset_cmd</Property>
         <Property name="TargetName">TargetPC1</Property>
-        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="BindingSrcType">None</Property>
         <Property name="Text">Reset</Property>
         <Property name="MomentaryStyle">Simple</Property>
         <Property name="Size">62, 34</Property>
@@ -1255,7 +1255,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay220" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p2/s3</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p2/s3</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1270,7 +1270,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay221" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p2/s1</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p2/s1</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1285,7 +1285,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay222" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p2/s2</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p2/s2</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1320,7 +1320,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay223" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p1/s3</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p1/s3</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1335,7 +1335,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay224" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p1/s1</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p1/s1</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1350,7 +1350,7 @@
       <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay225" children="Controls">
         <Property name="BindingSrcType">Signal</Property>
         <Property name="OutputValue">0</Property>
-        <Property name="BindingSrcPath">IMU/imu_sys/p1/s2</Property>
+        <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p1/s2</Property>
         <Property name="BindingSrcObject" />
         <Property name="TargetName">TargetPC1</Property>
         <Property name="TextFormatting">
@@ -1411,7 +1411,7 @@
         <Object type="MW.Instruments.NumericDisplay, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericDisplay219" children="Controls">
           <Property name="BindingSrcType">Signal</Property>
           <Property name="OutputValue">0</Property>
-          <Property name="BindingSrcPath">IMU/imu_sys/p7</Property>
+          <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p7</Property>
           <Property name="BindingSrcObject" />
           <Property name="TargetName">TargetPC1</Property>
           <Property name="TextFormatting">
@@ -1447,7 +1447,7 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">Signal</Property>
-          <Property name="BindingSrcPath">IMU/imu_sys/p6</Property>
+          <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p6</Property>
           <Property name="TargetName">TargetPC1</Property>
           <Property name="Size">24, 24</Property>
           <Property name="Location">100, 91</Property>
@@ -1457,7 +1457,7 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">Signal</Property>
-          <Property name="BindingSrcPath">IMU/imu_sys/p5</Property>
+          <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p5</Property>
           <Property name="TargetName">TargetPC1</Property>
           <Property name="Size">24, 24</Property>
           <Property name="Location">100, 67</Property>
@@ -1467,7 +1467,7 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">Signal</Property>
-          <Property name="BindingSrcPath">IMU/imu_sys/p4</Property>
+          <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p4</Property>
           <Property name="TargetName">TargetPC1</Property>
           <Property name="Size">24, 24</Property>
           <Property name="Location">100, 43</Property>
@@ -1477,7 +1477,7 @@
           <Property name="OutputValue">0</Property>
           <Property name="BindingSrcObject" />
           <Property name="BindingSrcType">Signal</Property>
-          <Property name="BindingSrcPath">IMU/imu_sys/p3</Property>
+          <Property name="BindingSrcPath">atrias_system/IMU/imu_sys/p3</Property>
           <Property name="TargetName">TargetPC1</Property>
           <Property name="Size">24, 24</Property>
           <Property name="Location">100, 19</Property>

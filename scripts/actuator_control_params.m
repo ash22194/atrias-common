@@ -8,10 +8,10 @@ B1_lpf_accel = -2*exp(-lpf_damping*fcut_acceleration*sample_time)*cos(fcut_accel
 B2_lpf_accel = exp(-2*lpf_damping*fcut_acceleration*sample_time);
 A_lpf_accel = 1 + B1_lpf_accel + B2_lpf_accel;
 %-- Low Pass filter for torque derivative
-fcut_dtau = 60*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
+fcut_dtau = 100*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
 lpf_damping = sqrt(2)/2; % butterworth damping ratio
-B1_lpf_dtau = -2*exp(-lpf_damping*fcut_dtau*sample_time)*cos(fcut_dtau*sample_time*sqrt(1-lpf_damping^2));
-B2_lpf_dtau = exp(-2*lpf_damping*fcut_dtau*sample_time);
+B1_lpf_dtau = -2*exp(-lpf_damping*fcut_dtau*elmo_sample_time)*cos(fcut_dtau*elmo_sample_time*sqrt(1-lpf_damping^2));
+B2_lpf_dtau = exp(-2*lpf_damping*fcut_dtau*elmo_sample_time);
 A_lpf_dtau = 1 + B1_lpf_dtau + B2_lpf_dtau;
 %-- Low Pass filter to reduce resonance
 fcut_res = 20*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
