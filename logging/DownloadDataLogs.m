@@ -50,10 +50,10 @@ function [  ] = DownloadDataLogs( tg )
     for i=1:length(data_sizes_4)
         data_struct.([data_names_4{i},'_recorded']) = data_4.data(:,starts_4(i):ends_4(i));
     end
-    %data_struct.system_clock_recorded = tg.TimeLog;
-    %data_struct.tet_recorded = tg.TETlog;
+    data_struct.system_clock_recorded = tg.TimeLog;
+    data_struct.tet_recorded = tg.TETlog;
     % save file
-    controller = 'test';%tg.Application;
+    controller = tg.Application;
     file_name = sprintf('data/%s - %s',datestr(clock,'mm_dd_yyyy HH_MM_SS_AM'), controller);
     save(file_name, '-struct','data_struct');
     load(file_name);
