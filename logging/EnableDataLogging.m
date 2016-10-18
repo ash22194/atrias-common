@@ -76,6 +76,8 @@ function [  ] = EnableDataLogging( )
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s3'])); %
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s4'])); %
     
+    fscopes(1).addsignal(tg.getsignalid([system_prefix 'p2/s1'])); % system clock
+    
     % 4khz scope
     fscopes(2).addsignal(tg.getsignalid([actuator_prefix 'p2/s1'])); % elmo commanded velocity
     fscopes(2).addsignal(tg.getsignalid([actuator_prefix 'p2/s2'])); %
@@ -108,7 +110,9 @@ function [  ] = EnableDataLogging( )
     fscopes(2).addsignal(tg.getsignalid([system_prefix 'p11/s4'])); % 
     
     fscopes(2).addsignal(tg.getsignalid([system_prefix 'p3/s1'])); % motors enabled
-
+    
+    fscopes(2).addsignal(tg.getsignalid([system_prefix 'p2/s1'])); % system clock
+    
     % Begin logging data
     fscopes.start();
 end
