@@ -25,10 +25,10 @@ function [  ] = EnableDataLogging( )
         {'Lazy',      'on',          'on',              8192});
     fscopes(1).Filename = 'F:\LOGS\LOG1_<%%%>.dat';
     fscopes(1).Decimation = 4;
-    fscopes(1).NumSamples = 1000;
+    fscopes(1).NumSamples = 1500;
     fscopes(2).Filename = 'F:\LOGS\LOG4_<%%%>.dat';
     fscopes(2).Decimation = 1;
-    fscopes(2).NumSamples = 1000;
+    fscopes(2).NumSamples = 1500;
     % Add signals to scopes
     % 1khz scope
     fscopes(1).addsignal(tg.getsignalid([actuator_prefix 'p1/s1'])); % commanded lateral torques

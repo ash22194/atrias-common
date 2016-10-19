@@ -1,4 +1,4 @@
-function [  ] = DownloadDataLogs( tg )
+function [ data_struct ] = DownloadDataLogs( tg )
     % download data from target
     prefix = 'F:\LOGS\';
     filename1 = 'LOG1_001.dat';
@@ -56,6 +56,5 @@ function [  ] = DownloadDataLogs( tg )
     controller = tg.Application;
     file_name = sprintf('data/%s - %s',datestr(clock,'mm_dd_yyyy HH_MM_SS_AM'), controller);
     save(file_name, '-struct','data_struct');
-    load(file_name);
 end
 
