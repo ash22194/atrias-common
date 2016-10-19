@@ -7,7 +7,7 @@ q = q_recorded(t_select,:);
 dq = dq_recorded(t_select,:);
 tau_lateral = lateral_torque_commands_recorded(t_select,:);
 t = time_recorded(t_select);
-qinc = elmo_measured_positions_recorded(t_select,:);
+qinc = incremental_recorded(t_select,:);
 dqinc = elmo_measured_velocities_recorded(t_select,:);
 velocity_command = sagittal_velocity_commands_recorded(t_select,:);
 elmo_velocity = elmo_measured_velocities_recorded(t_select,:);
@@ -55,13 +55,11 @@ plot_fscope('Virtual Leg Angle',{t,t}, {right_leg_angle*180/pi, left_leg_angle*1
 plot_fscope('Lateral Position',{t,t}, {[(q(:,9:10))*180/pi], [dq(:,9:10)*180/pi]},...
 {{'Right Inc Position';'Left Inc Position'},{'Right Inc Velocity','Left Inc Velocity'}},...
 {'Lateral Angles','Lateral Velocities'},{'Time (sec)','Time (sec)'},{'Angle (degrees)','Velocity (degrees/s)'},{'auto','auto'},2);
-
 % IMU data
 torso_pitch = q(:,13);
 torso_roll = q(:,11);
 right_leg_roll = pi/2 - q(:,5);
 left_leg_roll = pi/2 - q(:,6);
-
 % SEA deflections
 deflections = [ q(:,2)-q(:,1), q(:,4)-q(:,3), q(:,6)-q(:,5), q(:,8)-q(:,7)];
 spring_forces = zeros(size(deflections));
@@ -88,7 +86,6 @@ plot_fscope('Leg Forces',{t,t}, {[right_leg_force_measured], [left_leg_force_mea
 plot_fscope('Leg Torques',{t,t}, {[right_leg_torque_measured], [left_leg_torque_measured]}, ...
     {{'Measured'},{'Measured'}},...
     {'Right Leg Torque','Left Leg Torque'}, {'Time (sec)','Time (sec)'}, {'Torque (Nm)','Torque (Nm)'}, {[-700,700],[-700,700]}, 2);
-
 % Velocity commands
 plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), elmo_velocity_demands(:,1:2), elmo_velocity(:,1:2)], [velocity_command(:,3:4), elmo_velocity_demands(:,3:4), elmo_velocity(:,3:4)]}, ...
     {{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'},{'Back Cmd','Front Cmd','Back Dmd','Front Dmd','Back Measured','Front Measured'}},...
@@ -96,7 +93,6 @@ plot_fscope('Motor Velocity',{t,t}, {[velocity_command(:,1:2), elmo_velocity_dem
 plot_fscope('Motor Velocity',{t,t}, {[dq(:,[2 4]), elmo_velocity(:,1:2)], [dq(:,[6 8]), elmo_velocity(:,3:4)]}, ...
     {{'Back Abs','Front Abs','Back Inc','Front Inc'},{'Back Abs','Front Abs','Back Inc','Front Inc'}},...
     {'Right Motor Velocities','Left Motor Velocities'}, {'Time (sec)','Time (sec)'}, {'rad/s','rad/s'}, {'auto','auto'}, 2);
-
 % Torque commands
 plot_fscope('Motor Torque',{t,t}, {[elmo_torque(:,1:2), elmo_torque_demands(:,1:2)], [elmo_torque(:,3:4), elmo_torque_demands(:,3:4)]}, ...
     {{'Back Measured','Front Measured', 'Back Dmd','Front Dmd'},{'Back Measured','Front Measured', 'Back Dmd','Front Dmd'}},...
