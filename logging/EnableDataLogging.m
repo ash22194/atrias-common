@@ -22,11 +22,11 @@ function [  ] = EnableDataLogging( )
     end
     set(fscopes(1:number_of_fscopes), ...
         {'WriteMode', 'AutoRestart', 'DynamicFileName', 'WriteSize'}, ...
-        {'Lazy',      'on',          'on',              8192});
-    fscopes(1).Filename = 'F:\LOGS\LOG1_<%%%>.dat';
+        {'Lazy',      'on',          'on',              2*8192});
+    fscopes(1).Filename = 'D:\LOGS\LOG1_<%%%>.dat';
     fscopes(1).Decimation = 4;
     fscopes(1).NumSamples = 1500;
-    fscopes(2).Filename = 'F:\LOGS\LOG4_<%%%>.dat';
+    fscopes(2).Filename = 'D:\LOGS\LOG4_<%%%>.dat';
     fscopes(2).Decimation = 1;
     fscopes(2).NumSamples = 1500;
     % Add signals to scopes

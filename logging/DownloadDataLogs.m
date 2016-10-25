@@ -1,6 +1,7 @@
-function [ data_struct ] = DownloadDataLogs( tg )
+function [ data_struct ] = DownloadDataLogs( )
     % download data from target
-    prefix = 'F:\LOGS\';
+    tg = slrt;
+    prefix = 'D:\LOGS\';
     filename1 = 'LOG1_001.dat';
     filename4 = 'LOG4_001.dat';
     SimulinkRealTime.copyFileToHost(tg, [prefix, filename1]);
