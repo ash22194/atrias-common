@@ -17,6 +17,10 @@ set_param(0, 'CodeGenFolder', [currentFolder '/build']);
 % Set workspace variables
 daq_params_cmu;
 
+% Load configurations
+load([currentFolder, '/config/Configuration1khz.mat']);
+load([currentFolder, '/config/Configuration4khz.mat']);
+
 %% Check system is PC based
 % if ispc
 %     
