@@ -9,7 +9,7 @@
 %    (front). Velocities (d-prefix) and accelerations (dd-prefix) are similarly transformed.
 function [back, dback, ddback, front, dfront, ddfront] = VirtualLegToFourBar(l_leg, dl_leg, ddl_leg, phi, dphi, ddphi)
     
-    l_leg = max(min(l_leg,1.0),0.0);
+    l_leg = max(min(l_leg,0.999),0.001);
     back  = phi + acos(l_leg);
     front = phi - acos(l_leg);
     

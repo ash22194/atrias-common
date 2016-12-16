@@ -16,7 +16,7 @@ function [back_cmd, front_cmd, dback_cmd, dfront_cmd, ddback_cmd, ddfront_cmd] .
     ddback_cmd = ddback_desired;
     ddfront_cmd = ddfront_desired;
 
-    distance_threshold = 5*pi/180;
+    distance_threshold = 3*pi/180;
 
     if (min_back_distance < distance_threshold && sign(dback_desired) < 0) || ...
        (max_back_distance < distance_threshold && sign(dback_desired) > 0)

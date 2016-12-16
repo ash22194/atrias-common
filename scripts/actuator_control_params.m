@@ -1,5 +1,12 @@
 %% SEA control params
 
+%-- Low Pass filter for converting 1khz to 4khz commands
+fcut_1to4 = 500*(2*pi); 
+lpf_damping = sqrt(2)/2; 
+B1_lpf_1to4 = -2*exp(-lpf_damping*fcut_1to4*elmo_sample_time)*cos(fcut_1to4*elmo_sample_time*sqrt(1-lpf_damping^2));
+B2_lpf_1to4 = exp(-2*lpf_damping*fcut_1to4*elmo_sample_time);
+A_lpf_1to4 = 1 + B1_lpf_1to4 + B2_lpf_1to4;
+
 %-- Low Pass filter for torque derivative
 fcut_dtau = 100*(2*pi); % Hz, Low pass filter cutoff frequency when calculating acceleration from velocity
 lpf_damping = sqrt(2)/2; % butterworth damping ratio

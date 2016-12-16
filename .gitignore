@@ -9,7 +9,6 @@
 # Logs #
 ########
 [^gui].fig
-*.mat
 
 # MATLAB #
 ##########

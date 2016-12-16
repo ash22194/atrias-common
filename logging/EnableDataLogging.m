@@ -66,10 +66,10 @@ function [  ] = EnableDataLogging( )
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p5/s12'])); % yaw 
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p5/s13'])); % pitch 
     
-    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p1/s1'])); % desired SEA torques
-    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p1/s2'])); %
-    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p1/s3'])); %
-    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p1/s4'])); %
+    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s1'])); % desired SEA torques
+    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s2'])); %
+    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s3'])); %
+    fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s4'])); %
     
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s1'])); % elmo error codes
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s2'])); %
