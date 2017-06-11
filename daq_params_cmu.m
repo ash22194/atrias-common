@@ -76,8 +76,8 @@ BOOM_MAX_ENCODER_TICKS = 2^17 - 1; % Max value of the absolute boom encoders (17
 MTR_MAX_TEMP = 118; % Maximum motor temperature, degrees Celsius
 
 % From biped1_variant_defs.h
-RIGHT_HIP_CALIB_VAL = 5431;   %Calibration encoder value in ticks
-LEFT_HIP_CALIB_VAL = 117;  %Calibration encoder value in ticks
+RIGHT_HIP_CALIB_VAL = 5417;   %Calibration encoder value in ticks
+LEFT_HIP_CALIB_VAL = 123;  %Calibration encoder value in ticks
 RIGHT_HIP_CALIB_POS = 0.1066;  %Calibration angle in radians
 LEFT_HIP_CALIB_POS = 0.0422; %Calibration angle in radians
 MTR_MAX_CONT_CURRENT = 100.0; %Maximum continuous amplifier current (RMS Amps)
@@ -95,10 +95,10 @@ HIP_CURRENT_LIMIT = MTR_HIP_MAX_CURRENT; % Maximum motor current for testing
 % Right Leg (A/B flipped) (TRAN == motor)
 % A = Back
 % B = Front
-LEG1_LEG_A_CALIB_VAL  = 262708537; %Calibration encoder value in ticks
-LEG1_TRAN_A_CALIB_VAL = 197602399; %Calibration encoder value in ticks
-LEG1_LEG_B_CALIB_VAL  = 263788053; %Calibration encoder value in ticks
-LEG1_TRAN_B_CALIB_VAL = 198744399; %Calibration encoder value in ticks
+LEG1_LEG_A_CALIB_VAL  = 263261719; % Right Back Load
+LEG1_TRAN_A_CALIB_VAL = 197568574; % Right Back Motor
+LEG1_LEG_B_CALIB_VAL  = 263564800; % Right Front Load
+LEG1_TRAN_B_CALIB_VAL = 198516994; % Right Front Motor
 
 LEG1_LEG_A_RAD_PER_CNT  = -9.8039216e-09; %Ticks to rad constant
 LEG1_TRAN_A_RAD_PER_CNT = -9.8039216e-09; %Ticks to rad constant
@@ -111,10 +111,10 @@ LEG1_MOTOR_B_DIRECTION = 1.0;
 % Left Leg (A/B flipped) (TRAN == motor)
 % A = Back
 % B = Front
-LEG2_LEG_A_CALIB_VAL  = 173857819; % %Calibration encoder value in ticks
-LEG2_TRAN_A_CALIB_VAL = 198018299; % %Calibration encoder value in ticks
-LEG2_LEG_B_CALIB_VAL  = 264685365; % %Calibration encoder value in ticks
-LEG2_TRAN_B_CALIB_VAL = 141704509; % %Calibration encoder value in ticks
+LEG2_LEG_A_CALIB_VAL  = 173586966; % Left Back Load
+LEG2_TRAN_A_CALIB_VAL = 198122754; % Left Back Motor
+LEG2_LEG_B_CALIB_VAL  = 264679560; % Left Front Load
+LEG2_TRAN_B_CALIB_VAL = 141739334; % Left Front Motor
 
 LEG2_LEG_A_RAD_PER_CNT  =  9.8039216e-09; %Ticks to rad constant
 LEG2_TRAN_A_RAD_PER_CNT = -9.8039216e-09; %Ticks to rad constant
