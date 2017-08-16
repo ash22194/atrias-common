@@ -76,8 +76,8 @@ BOOM_MAX_ENCODER_TICKS = 2^17 - 1; % Max value of the absolute boom encoders (17
 MTR_MAX_TEMP = 118; % Maximum motor temperature, degrees Celsius
 
 % From biped1_variant_defs.h
-RIGHT_HIP_CALIB_VAL = 5417;   %Calibration encoder value in ticks
-LEFT_HIP_CALIB_VAL = 123;  %Calibration encoder value in ticks
+RIGHT_HIP_CALIB_VAL = 1140;   %Calibration encoder value in ticks
+LEFT_HIP_CALIB_VAL = 2028;  %Calibration encoder value in ticks
 RIGHT_HIP_CALIB_POS = 0.1066;  %Calibration angle in radians
 LEFT_HIP_CALIB_POS = 0.0422; %Calibration angle in radians
 MTR_MAX_CONT_CURRENT = 100.0; %Maximum continuous amplifier current (RMS Amps)
