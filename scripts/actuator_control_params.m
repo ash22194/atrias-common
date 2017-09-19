@@ -77,3 +77,7 @@ B1_lpf_accelerometer = -2*exp(-lpf_damping*fcut_accelerometer*sample_time)*cos(f
 B2_lpf_accelerometer = exp(-2*lpf_damping*fcut_accelerometer*sample_time);
 A_lpf_accelerometer = 1 + B1_lpf_accelerometer + B2_lpf_accelerometer;
 
+
+% SEA Feedforward
+Q_kalman_sea_ff = (0.002/sea_kalman_sample_time)^2; % input: motor_acceleration (rad/s^2)
+R_kalman_sea_ff = 0.2^2; % measurement: motor_velocity (rad/s)
