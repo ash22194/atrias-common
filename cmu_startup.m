@@ -5,6 +5,7 @@ close all; clear all; path(pathdef); clc;
 
 currentFolder = fileparts(mfilename('fullpath'));
 addpath([currentFolder '/atrias-robot/']);
+addpath([currentFolder '/atrias-robot/controllers']);
 addpath([currentFolder '/logging/']);
 addpath(genpath([currentFolder '/functions/']));
 addpath([currentFolder '/scripts/']);

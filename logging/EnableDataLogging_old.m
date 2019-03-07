@@ -23,10 +23,10 @@ function [  ] = EnableDataLogging( )
     set(fscopes(1:number_of_fscopes), ...
         {'WriteMode', 'AutoRestart', 'DynamicFileName', 'WriteSize'}, ...
         {'Lazy',      'on',          'on',              2*8192});
-    fscopes(1).Filename = 'H:\LOG1_<%%%>.dat';
+    fscopes(1).Filename = 'D:\LOGS\LOG1_<%%%>.dat';
     fscopes(1).Decimation = 4;
     fscopes(1).NumSamples = 1500;
-    fscopes(2).Filename = 'H:\LOG4_<%%%>.dat';
+    fscopes(2).Filename = 'D:\LOGS\LOG4_<%%%>.dat';
     fscopes(2).Decimation = 1;
     fscopes(2).NumSamples = 1500;
     % Add signals to scopes
@@ -70,7 +70,6 @@ function [  ] = EnableDataLogging( )
     fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s2'])); %
     fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s3'])); %
     fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'p2/s4'])); %
-%     fscopes(1).addsignal(tg.getsignalid([behavior_prefix 'Behavior/From204']));
     
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s1'])); % elmo error codes
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p14/s2'])); %
@@ -80,11 +79,6 @@ function [  ] = EnableDataLogging( )
     fscopes(1).addsignal(tg.getsignalid([system_prefix 'p2/s1'])); % system clock
     
     % 4khz scope
-    fscopes(2).addsignal(tg.getsignalid([behavior_prefix 'Behavior/Contact/Data Type Conversion'])) % Phase
-    fscopes(2).addsignal(tg.getsignalid([behavior_prefix 'Behavior/Contact/Logical Operator'])) % Right Stance
-    fscopes(2).addsignal(tg.getsignalid([behavior_prefix 'Behavior/Contact/Logical Operator1'])) % Left Stance
-    fscopes(2).addsignal(tg.getsignalid([behavior_prefix 'Behavior/XOR']))     % Right is primary?
-    
     fscopes(2).addsignal(tg.getsignalid([actuator_prefix 'p2/s1'])); % elmo commanded velocity
     fscopes(2).addsignal(tg.getsignalid([actuator_prefix 'p2/s2'])); %
     fscopes(2).addsignal(tg.getsignalid([actuator_prefix 'p2/s3'])); %
