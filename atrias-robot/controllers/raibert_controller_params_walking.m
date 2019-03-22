@@ -64,10 +64,10 @@ ctrl.sagittal_motor_efficiency = 0.60;
 ctrl.kp_sea = 20;
 
 %% Swing - Leg control
-ctrl.kp_velocity_swing = 10;
+ctrl.kp_velocity_swing = 8;
 ctrl.kp_torque_swing = 5000;
 ctrl.kd_torque_swing = 1.0*2*sqrt(ctrl.kp_torque_swing*ctrl.i_motor);
-ctrl.kp_lateral_swing = 1000;
+ctrl.kp_lateral_swing = 750;
 ctrl.kd_lateral_swing = 0.8*2*sqrt(ctrl.kp_lateral_swing*ctrl.i_lateral_about_pelvis);
 ctrl.z_retract_flight = 0.20;  % [m], max distance to retract foot from ground (going to flight)
 ctrl.max_z_retract = 0.20; % [m]
@@ -75,7 +75,7 @@ ctrl.min_z_retract = 0.075; % [m]
 ctrl.retract_extend_speed = 1.25; % [m/s]
 ctrl.reactive_swing_time = 0.500;
 ctrl.z_swing_target = 1.1;
-% ctrl.z_swing_target = 0.95;
+% ctrl.z_swing_target = 1.0;
 ctrl.y_swing_target_right = 0.15;  % [m], lateral distance to y foot target in swing
 ctrl.y_swing_target_left = -0.15;  % [m], lateral distance to y foot target in swing
 ctrl.min_swing_time = 0.200;   % [s], min time for planning a single support swing foot trajectory
@@ -135,6 +135,7 @@ ctrl.B1_lpf_tau = -2*exp(-ctrl.lpf_damping*ctrl.f_tau*sample_time)*...
                                cos(ctrl.f_tau*sample_time*sqrt(1-ctrl.lpf_damping^2));
 ctrl.B2_lpf_tau = exp(-2*ctrl.lpf_damping*ctrl.f_tau*sample_time);
 ctrl.A_lpf_tau = 1 + ctrl.B1_lpf_tau + ctrl.B2_lpf_tau;
+
 %% CoM Kalman filter parameters
 % Coordinate system is z-up and in the yawed frame.
 % x_state = [x, dx/dt, ddx/ddt]
@@ -170,18 +171,19 @@ ctrl.P0_kalman_vertical = diag([0.015^2, 0.05^2, 0.125^2]); % [m, m/s, m/s^2], i
 
 %% Raibert Control
 
-ctrl.weight_factor = 1.2;
-ctrl.com_x_vel_desired = 1;
-ctrl.kp_theta = 700;
-ctrl.kd_theta = 200;
-ctrl.ki_theta = 450;
+ctrl.weight_factor = 0.9;
+ctrl.com_x_vel_desired = 0.7;
+ctrl.kp_theta = 350;
+ctrl.kd_theta = 80;
+ctrl.ki_theta = 250;
 % ctrl.kp_theta = 8;
 % ctrl.kd_theta = 15;
 ctrl.z_com_desired = 0.95;
 ctrl.torso_pitch_desired = 0;
-ctrl.kp_z = 3000;
-ctrl.kd_z = 300;
+ctrl.kp_z = 1800;
+ctrl.kd_z = 200;
 % ctrl.kp_z = 0;
 % ctrl.kd_z = 0;
 ctrl.kp_x = 0;
 ctrl.kd_x = 0;
+ctrl.enable_fx_feedforward = 1;
