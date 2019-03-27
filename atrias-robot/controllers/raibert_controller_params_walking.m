@@ -75,7 +75,6 @@ ctrl.min_z_retract = 0.075; % [m]
 ctrl.retract_extend_speed = 1.25; % [m/s]
 ctrl.reactive_swing_time = 0.500;
 ctrl.z_swing_target = 1.1;
-% ctrl.z_swing_target = 1.0;
 ctrl.y_swing_target_right = 0.15;  % [m], lateral distance to y foot target in swing
 ctrl.y_swing_target_left = -0.15;  % [m], lateral distance to y foot target in swing
 ctrl.min_swing_time = 0.200;   % [s], min time for planning a single support swing foot trajectory
@@ -171,19 +170,16 @@ ctrl.P0_kalman_vertical = diag([0.015^2, 0.05^2, 0.125^2]); % [m, m/s, m/s^2], i
 
 %% Raibert Control
 
-ctrl.weight_factor = 0.9;
+ctrl.weight_factor = 1.0;
 ctrl.com_x_vel_desired = 0.7;
-ctrl.kp_theta = 350;
-ctrl.kd_theta = 80;
-ctrl.ki_theta = 250;
-% ctrl.kp_theta = 8;
-% ctrl.kd_theta = 15;
-ctrl.z_com_desired = 0.95;
+ctrl.kp_theta = 860;
+ctrl.kd_theta = 120;
+ctrl.ki_theta = 0;
+ctrl.z_com_desired = 1.0;
 ctrl.torso_pitch_desired = 0;
-ctrl.kp_z = 1800;
-ctrl.kd_z = 200;
-% ctrl.kp_z = 0;
-% ctrl.kd_z = 0;
+ctrl.kp_z = 2100;
+ctrl.kd_z = 300;
 ctrl.kp_x = 0;
 ctrl.kd_x = 0;
 ctrl.enable_fx_feedforward = 1;
+ctrl.min_rest_length = 0.8;
